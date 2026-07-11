@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://www.respaldosgc.com.ar/" />
 
     <!-- Schema Markup JSON-LD -->
-    <script type="application/ld+json"> 
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FurnitureStore",
@@ -19,64 +19,47 @@
       "sameAs": ["https://www.instagram.com/respaldosgyc/", "https://www.facebook.com/RespaldosGC/", "https://share.google/2YIEavSN9QTB5OUTb"]
     }
     </script>
+
     <style>
-        :root { --dark: #1a1a1a; --accent: #c5a059; --light: #ffffff; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--light); }
-        
-        /* Nav */
-        nav { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; border-bottom: 1px solid #333; }
-        nav a { color: var(--light); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-left: 20px; }
-        
-        /* Hero */
-        .hero { padding: 100px 5%; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg-respaldos.jpg'); background-size: cover; }
-        h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
-        .btn-cta { background: var(--accent); color: var(--dark); padding: 15px 40px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
-        
-        /* Sections */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); padding: 60px 5%; gap: 40px; }
-        .feature-item { border-left: 2px solid var(--accent); padding-left: 20px; }
-        
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #888; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; background: #fdfdfd; }
+        header { background: #1a1a1a; color: #fff; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .hero { background: #222; color: #fff; padding: 80px 5%; text-align: center; }
+        .container { padding: 50px 5%; max-width: 1000px; margin: auto; }
+        .btn-venta { background: #c5a059; color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; display: inline-block; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
+        footer { background: #1a1a1a; color: #888; text-align: center; padding: 40px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div style="font-weight: bold; font-size: 1.5rem;">RESPALDOS G&C</div>
-        <div>
-            <a href="#">Catalogo</a>
-            <a href="#">Nosotros</a>
-            <a href="https://wa.me/541130157350" target="_blank">Contacto</a>
-        </div>
-    </nav>
+    <header>
+        <div><strong>RESPALDOS G&C</strong></div>
+        <nav><a href="#" style="color:white; text-decoration:none;">Catálogo</a></nav>
+    </header>
 
     <main>
         <section class="hero">
-            <h1>Expertos en Respaldos de Cama</h1>
-            <p>Diseño, fabricaciOn y calidad industrial. Venta directa de fAbrica a todo el pais.</p>
-            <a href="https://wa.me/541130157350" class="btn-cta" target="_blank">CONSULTAR PRESUPUESTO</a>
+            <h1>Fábrica de Respaldos de Cama Premium</h1>
+            <p>Diseño, confort y calidad de terminación. Venta directa a consumidor final y envíos a todo el territorio nacional.</p>
+            <a href="https://wa.me/541130157350" class="btn-venta">CONSULTAR POR WHATSAPP</a>
         </section>
 
-        <section class="features">
-            <div class="feature-item">
-                <h3>FABRICACION DIRECTA</h3>
-                <p>Sin intermediarios. Controlamos cada etapa del proceso en Don Torcuato para asegurar terminaciones premium.</p>
-            </div>
-            <div class="feature-item">
-                <h3>DISEÑO A MEDIDA</h3>
-                <p>Adaptamos medidas, materiales y texturas a la estEtica de tu hogar.</p>
-            </div>
-            <div class="feature-item">
-                <h3>ENViOS NACIONALES</h3>
-                <p>Embalaje tecnico y despacho profesional por expreso a toda Argentina.</p>
+        <section class="container">
+            <h2>Calidad Industrial, Diseño Artesanal</h2>
+            <p>Somos fabricantes directos en Don Torcuato. No tercerizamos procesos, lo que nos permite garantizar la excelencia en cada capitoné, costura y estructura.</p>
+            
+            <div class="grid">
+                <div><h3>Estructura Reforzada</h3><p>Materiales de primera calidad para una durabilidad garantizada.</p></div>
+                <div><h3>Personalización</h3><p>Elegí la tela, el color y la medida exacta para tu dormitorio.</p></div>
+                <div><h3>Envíos Nacionales</h3><p>Despacho profesional vía expreso a cualquier punto del país.</p></div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Boulogne Sur Mer 1348, Don Torcuato | +54 1130 157350</p>
-        <p>Instagram | Facebook | Google Maps</p>
+        <p>Boulogne Sur Mer 1348, Don Torcuato, Buenos Aires | Atención personalizada: +54 1130 157350</p>
+        <p>© 2026 Respaldos G&C - Especialistas en descanso premium</p>
     </footer>
 
 </body>
-</html> 
+</html>
