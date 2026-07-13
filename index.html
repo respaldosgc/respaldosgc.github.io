@@ -3,82 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO CRÍTICO -->
-    <title>Respaldos G&C | Fábrica de Respaldos de Cama Artesanales Premium</title>
-    <meta name="description" content="Respaldos G&C: Fábrica de respaldos de cama a medida en Don Torcuato. Diseño, calidad artesanal y materiales premium. Venta directa y envío a todo el país.">
+    <title>Respaldos G&C | Fábrica Premium de Respaldos de Cama</title>
+    <meta name="description" content="Fabricación de respaldos de cama de alta gama. Venta directa de fábrica en Don Torcuato. Diseño a medida y envíos nacionales por expreso.">
     <link rel="canonical" href="https://www.respaldosgc.com.ar/" />
-    
-    <!-- Open Graph y Twitter para Redes -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Respaldos G&C | Fábrica de Respaldos de Cama Premium" />
-    <meta property="og:description" content="Transformamos tu dormitorio. Respaldos a medida, artesanales y directos de fábrica." />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FurnitureStore",
+      "name": "Respaldos G&C",
+      "url": "https://www.respaldosgc.com.ar",
+      "telephone": "+541130157350",
+      "address": { "@type": "PostalAddress", "streetAddress": "Boulogne Sur Mer 1348", "addressLocality": "Don Torcuato", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+      "sameAs": ["https://www.instagram.com/respaldosgyc/", "https://www.facebook.com/RespaldosGC/", "https://share.google/2YIEavSN9QTB5OUTb"]
+    }
+    </script>
 
     <style>
-        /* Estilos optimizados */
-        body { font-family: sans-serif; line-height: 1.6; color: #333; margin: 0; }
-        header { padding: 2rem; text-align: center; background: #f4f4f4; }
-        .catalogo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem; max-width: 1200px; margin: auto; }
-        .product-item { border: 1px solid #ddd; padding: 1rem; border-radius: 8px; }
-        img { width: 100%; height: 300px; object-fit: cover; border-radius: 4px; }
-        h1, h2 { color: #1a1a1a; }
+        :root { --dark: #1a1a1a; --accent: #c5a059; --light: #ffffff; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--light); }
+        nav { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; border-bottom: 1px solid #333; }
+        nav a { color: var(--light); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-left: 20px; }
+        .hero { padding: 100px 5%; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg-respaldos.jpg'); background-size: cover; }
+        h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
+        .btn-cta { background: var(--accent); color: var(--dark); padding: 15px 40px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); padding: 60px 5%; gap: 40px; }
+        .feature-item { border-left: 2px solid var(--accent); padding-left: 20px; }
+        .catalogo { padding: 60px 5%; text-align: center; }
+        .grid-catalogo { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
+        .card { background: #222; padding: 20px; border-radius: 8px; border: 1px solid #333; }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #888; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Fábrica de Respaldos de Cama | Respaldos G&C</h1>
-    <p>Calidad artesanal desde Don Torcuato hacia todo el país.</p>
-</header>
-
-<main>
-    <section id="catalogo">
-        <h2 style="text-align:center;">Nuestras Colecciones</h2>
-        
-        <div class="catalogo-grid">
-            <!-- Modelo Supraclass: Etiqueta ARTICLE obligatoria para SEO -->
-            <article class="product-item">
-                <img src="supraclass/supraclass-matrimonial-pana-negro.webp" alt="Respaldo de cama extra alto modelo Supraclass de 1.50 metros">
-                <h3>Línea SUPRACLASS</h3>
-                <p>Nuestra línea más imponente de 1,50 metros. Tapizado premium.</p>
-                <a href="productos/supraclass.html">Ver más detalles</a>
-            </article>
-
-            <!-- Modelo Gajos -->
-            <article class="product-item">
-                <img src="respaldos-con-gajos/respaldo-con-gajos-3.webp" alt="Respaldo de cama moderno diseño en gajos tapizado en lino">
-                <h3>Línea Gajos</h3>
-                <p>Diseño geométrico y moderno para dormitorios contemporáneos.</p>
-                <a href="productos/gajos.html">Ver más detalles</a>
-            </article>
-
-            <!-- Modelo Seleccion -->
-            <article class="product-item">
-                <img src="Seleccion/seleccion.webp" alt="Respaldo de cama matrimonial Nube con colores de la seleccion Argentina">
-                <h3>Línea Nube Selección</h3>
-                <p>El detalle artesanal que define el estilo de tu habitación.</p>
-                <a href="productos/seleccion.html">Ver más detalles</a>
-            </article>
+    <nav>
+        <div style="font-weight: bold; font-size: 1.5rem;">RESPALDOS G&C</div>
+        <div>
+            <a href="#catalogo">Catálogo</a>
+            <a href="https://wa.me/541130157350" target="_blank">Contacto</a>
         </div>
-    </section>
-</main>
+    </nav>
 
-<!-- Schema.org para posicionamiento local (El motor del SEO) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FurnitureStore",
-  "name": "Respaldos G&C",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Boulogne Sur Mer 1348",
-    "addressLocality": "Don Torcuato",
-    "addressRegion": "Buenos Aires",
-    "addressCountry": "AR"
-  },
-  "telephone": "+541130157350"
-}
-</script>
+    <main>
+        <section class="hero">
+            <h1>Expertos en Respaldos de Cama</h1>
+            <p>Diseño, fabricación y calidad industrial. Venta directa de fábrica a todo el país.</p>
+            <a href="https://wa.me/541130157350" class="btn-cta" target="_blank">CONSULTAR PRESUPUESTO</a>
+        </section>
+
+        <!-- SECCIÓN CATÁLOGO -->
+        <section id="catalogo" class="catalogo">
+            <h2 style="color: var(--accent);">NUESTROS MODELOS</h2>
+            <div class="grid-catalogo">
+                <div class="card"><h3>Clásico</h3><a href="productos/clasico.html" style="color:var(--accent); font-weight:bold;">VER MÁS →</a></div>
+                <div class="card"><h3>Supraclass</h3><a href="productos/supraclass.html" style="color:var(--accent); font-weight:bold;">VER MÁS →</a></div>
+                <div class="card"><h3>Nube</h3><a href="productos/nube.html" style="color:var(--accent); font-weight:bold;">VER MÁS →</a></div>
+                <div class="card"><h3>Canelón</h3><a href="productos/canelon.html" style="color:var(--accent); font-weight:bold;">VER MÁS →</a></div>
+                <div class="card"><h3>Funda Tusor</h3><a href="productos/funda.html" style="color:var(--accent); font-weight:bold;">VER MÁS →</a></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-item"><h3>FABRICACIÓN DIRECTA</h3><p>Sin intermediarios. Controlamos cada etapa del proceso en Don Torcuato para asegurar terminaciones premium.</p></div>
+            <div class="feature-item"><h3>DISEÑO A MEDIDA</h3><p>Adaptamos medidas, materiales y texturas a la estética de tu hogar.</p></div>
+            <div class="feature-item"><h3>ENVÍOS NACIONALES</h3><p>Embalaje técnico y despacho profesional por expreso a toda Argentina.</p></div>
+        </section>
+
+        <!-- SECCIÓN DE AUTORIDAD Y TENDENCIAS -->
+        <section style="background-color: #f4f4f4; color: #1a1a1a; padding: 80px 5%; text-align: center;">
+            <div style="max-width: 800px; margin: auto;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #c5a059; text-transform: uppercase;">El fin de una era: ¿Qué está pasando con el diseño de tu dormitorio?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                    Recientes informes de tendencias han confirmado lo que muchos interioristas venían advirtiendo: <strong>el estándar de los respaldos de cama ha cambiado radicalmente</strong>. Aquellos modelos que fueron el centro del dormitorio durante años están siendo desplazados por alternativas técnicas que priorizan la ergonomía y la integración espacial.
+                </p>
+
+                <div style="text-align: left; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0;">¿Tu respaldo está quedando fuera de época?</h3>
+                    <p>Mantener piezas que no cumplen con los nuevos requerimientos de confort desvaloriza tu inversión. La falta de soporte ergonómico real es la principal queja ante modelos obsoletos.</p>
+                    
+                    <h3 style="color: #c5a059;">La solución: Ingeniería de descanso G&C</h3>
+                    <ul>
+                        <li><strong>Estructura técnica:</strong> Diseñamos piezas con madera reforzada que cumplen los estándares 2026.</li>
+                        <li><strong>Personalización total:</strong> Fabricantes directos en Don Torcuato. Eliminamos la "talla única".</li>
+                        <li><strong>Durabilidad:</strong> Piezas de autor diseñadas para perdurar frente a la obsolescencia del mercado masivo.</li>
+                    </ul>
+                </div>
+
+                <p style="margin-top: 30px; font-weight: bold; font-size: 1.2rem;">No esperes a que tu dormitorio se sienta antiguo. Tu descanso es una prioridad técnica.</p>
+                <a href="https://wa.me/541130157350?text=Hola,%20vi%20la%20info%20en%20la%20web%20sobre%20el%20cambio%20de%20diseño%20y%20quiero%20asesoramiento%20técnico." class="btn-cta" style="background: #1a1a1a; color: white;">OBTENER ASESORAMIENTO TÉCNICO</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Boulogne Sur Mer 1348, Don Torcuato | +54 1130 157350</p>
+        <p>Instagram | Facebook | Google Maps</p>
+    </footer>
 
 </body>
 </html>
