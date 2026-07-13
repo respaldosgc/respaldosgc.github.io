@@ -490,19 +490,44 @@ Trabajamos directamente desde nuestra f√°brica en Don Torcuato y realizamos env√
                     
     </main>
 
-    <footer>
+<footer>
         <p>Boulogne Sur Mer 1348, Don Torcuato | +54 1130 157350</p>
         <p>Instagram | Facebook | Google Maps</p>
     </footer>
-<script>
+
+    <!-- Script 1: FAQ -->
+    <script>
         function toggleFaq(element) {
-        var answer = element.nextElementSibling;
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
-        } else {
-            answer.style.display = "block";
+            var answer = element.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
         }
-    } 
-      </script>
+    </script>
+
+    <!-- Script 2: Lenis Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script> 
+    <script>
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
 </body>
 </html>
