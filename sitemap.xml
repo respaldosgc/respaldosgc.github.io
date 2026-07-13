@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <url>
-    <loc>https://www.respaldosgc.com.ar/index.html</loc>
-    <lastmod>2026-07-12T21:30:00-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.respaldosgc.com.ar/IMG/logo-gc.jpg</image:loc>
-      <image:title>Respaldos G&amp;C - Fábrica Premium de Respaldos de Cama</image:title>
-      <image:caption>Expertos en diseño, fabricación y calidad industrial de respaldos de cama a medida.</image:caption>
-    </image:image>
-  </url>
+<url>
+  <loc>https://www.respaldosgc.com.ar/index.html</loc>
+  <lastmod>2026-07-12T22:15:00-03:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+  <image:image>
+    <image:loc>https://www.respaldosgc.com.ar/logos/logo-event.webp</image:loc>
+    <image:title>Respaldos G&amp;C - Fábrica Premium de Respaldos de Cama</image:title>
+    <image:caption>Logo oficial de Respaldos G&amp;C - Especialistas en descanso y diseño de interiores.</image:caption>
+  </image:image>
+</url>
 
   <url>
     <loc>https://www.respaldosgc.com.ar/clasico.html</loc>
