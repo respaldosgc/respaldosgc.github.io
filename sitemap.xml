@@ -17,12 +17,12 @@
 
   <!-- Modelo Clásico -->
   <url>
-    <loc>https://www.respaldosgc.com.ar/productos/clasico.html</loc>
+    <loc>https://www.respaldosgc.com.ar/clasico.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.respaldosgc.com.ar/IMG/productos/clasico.jpg</image:loc>
+      <image:loc>https://www.respaldosgc.com.ar/clasico/clasico-funda.webp</image:loc>
       <image:title>Respaldo Línea Clásico - Respaldos G&C</image:title>
       <image:caption>Respaldo de diseño atemporal confeccionado con materiales premium y estructura reforzada.</image:caption>
     </image:image>
@@ -30,12 +30,12 @@
 
   <!-- Modelo Supraclass -->
   <url>
-    <loc>https://www.respaldosgc.com.ar/productos/supraclass.html</loc>
+    <loc>https://www.respaldosgc.com.ar/supraclass.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.respaldosgc.com.ar/IMG/productos/supraclass.jpg</image:loc>
+      <image:loc>https://www.respaldosgc.com.ar/supraclass/supraclass-matrimonial-pana-beige.web</image:loc>
       <image:title>Respaldo Línea Supraclass - Respaldos G&C</image:title>
       <image:caption>Sofisticación y soporte ergonómico superior para un descanso de alta gama.</image:caption>
     </image:image>
@@ -43,12 +43,12 @@
 
   <!-- Modelo Nube -->
   <url>
-    <loc>https://www.respaldosgc.com.ar/productos/nube.html</loc>
+    <loc>https://www.respaldosgc.com.ar/nube.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.respaldosgc.com.ar/IMG/productos/nube.jpg</image:loc>
+      <image:loc>https://www.respaldosgc.com.ar/respaldos-nube/respaldo-con-gajos2.webp</image:loc>
       <image:title>Respaldo Línea Nube - Respaldos G&C</image:title>
       <image:caption>Diseño mullido y confortable, ideal para un estilo de dormitorio relajado.</image:caption>
     </image:image>
@@ -56,12 +56,12 @@
 
   <!-- Modelo Canelón -->
   <url>
-    <loc>https://www.respaldosgc.com.ar/productos/canelon.html</loc>
+    <loc>https://www.respaldosgc.com.ar/canelon.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.respaldosgc.com.ar/IMG/productos/canelon.jpg</image:loc>
+      <image:loc>https://www.respaldosgc.com.ar/respaldos-con-gajos/respaldo-con-gajos-25cm-1metro-co</image:loc>
       <image:title>Respaldo Línea Canelón - Respaldos G&C</image:title>
       <image:caption>Respaldo con diseño de costuras verticales que estilizan y dan altura al dormitorio.</image:caption>
     </image:image>
@@ -69,12 +69,12 @@
 
   <!-- Modelo con Funda -->
   <url>
-    <loc>https://www.respaldosgc.com.ar/productos/funda.html</loc>
+    <loc>https://www.respaldosgc.com.ar/funda.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.respaldosgc.com.ar/IMG/productos/funda-tusor.jpg</image:loc>
+      <image:loc>https://www.respaldosgc.com.ar/clasico/clasico-funda.webp</image:loc>
       <image:title>Respaldo con Funda de Tusor Lavable - Respaldos G&C</image:title>
       <image:caption>Respaldo estilo boho chic con funda desmontable 100% lavable y estructura protegida.</image:caption>
     </image:image>
