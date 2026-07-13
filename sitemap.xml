@@ -8,7 +8,7 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.respaldosgc.com.ar/IMG/logo-gc.jpg</image:loc>
-      <image:title>Respaldos G&C - Fábrica Premium de Respaldos de Cama</image:title>
+      <image:title>Respaldos G&amp;C - Fábrica Premium de Respaldos de Cama</image:title>
       <image:caption>Expertos en diseño, fabricación y calidad industrial de respaldos de cama a medida.</image:caption>
     </image:image>
   </url>
@@ -20,7 +20,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.respaldosgc.com.ar/clasico/clasico-funda.webp</image:loc>
-      <image:title>Respaldo Línea Clásico - Respaldos G&C</image:title>
+      <image:title>Respaldo Línea Clásico - Respaldos G&amp;C</image:title>
       <image:caption>Respaldo de diseño atemporal confeccionado con materiales premium y estructura reforzada.</image:caption>
     </image:image>
   </url>
@@ -32,7 +32,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.respaldosgc.com.ar/supraclass/supraclass-matrimonial-pana-beige.webp</image:loc>
-      <image:title>Respaldo Línea Supraclass - Respaldos G&C</image:title>
+      <image:title>Respaldo Línea Supraclass - Respaldos G&amp;C</image:title>
       <image:caption>Sofisticación y soporte ergonómico superior para un descanso de alta gama.</image:caption>
     </image:image>
   </url>
@@ -44,7 +44,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.respaldosgc.com.ar/respaldos-nube/respaldo-con-gajos2.webp</image:loc>
-      <image:title>Respaldo Línea Nube - Respaldos G&C</image:title>
+      <image:title>Respaldo Línea Nube - Respaldos G&amp;C</image:title>
       <image:caption>Diseño mullido y confortable, ideal para un estilo de dormitorio relajado.</image:caption>
     </image:image>
   </url>
@@ -56,7 +56,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.respaldosgc.com.ar/respaldos-con-gajos/respaldo-con-gajos-25cm-1metro-color-gris.webp</image:loc>
-      <image:title>Respaldo Línea Canelón - Respaldos G&C</image:title>
+      <image:title>Respaldo Línea Canelón - Respaldos G&amp;C</image:title>
       <image:caption>Respaldo con diseño de costuras verticales que estilizan y dan altura al dormitorio.</image:caption>
     </image:image>
   </url>
@@ -68,7 +68,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.respaldosgc.com.ar/clasico/clasico-funda.webp</image:loc>
-      <image:title>Respaldo con Funda de Tusor Lavable - Respaldos G&C</image:title>
+      <image:title>Respaldo con Funda de Tusor Lavable - Respaldos G&amp;C</image:title>
       <image:caption>Respaldo estilo boho chic con funda desmontable 100% lavable y estructura protegida.</image:caption>
     </image:image>
   </url>
