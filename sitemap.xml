@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Página principal -->
   <url>
     <loc>https://www.respaldosgc.com.ar/index.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
@@ -15,7 +13,6 @@
     </image:image>
   </url>
 
-  <!-- Modelo Clásico -->
   <url>
     <loc>https://www.respaldosgc.com.ar/clasico.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
@@ -28,7 +25,6 @@
     </image:image>
   </url>
 
-  <!-- Modelo Supraclass -->
   <url>
     <loc>https://www.respaldosgc.com.ar/supraclass.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
@@ -41,7 +37,6 @@
     </image:image>
   </url>
 
-  <!-- Modelo Nube -->
   <url>
     <loc>https://www.respaldosgc.com.ar/nube.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
@@ -54,7 +49,6 @@
     </image:image>
   </url>
 
-  <!-- Modelo Canelón -->
   <url>
     <loc>https://www.respaldosgc.com.ar/canelon.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
@@ -67,7 +61,6 @@
     </image:image>
   </url>
 
-  <!-- Modelo con Funda -->
   <url>
     <loc>https://www.respaldosgc.com.ar/funda.html</loc>
     <lastmod>2026-07-12T21:30:00-03:00</lastmod>
