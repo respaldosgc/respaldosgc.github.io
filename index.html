@@ -243,7 +243,15 @@ content="Fabricamos respaldos de cama tapizados a medida. Venta directa de fábr
     }
     .faq-item:hover .faq-question { background-color: #eee; }
 
-  
+
+        /* Animación para las secciones actuales */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+section, .respaldo-container, .seccion-fabricacion, .seccion-medidas, .seccion-telas, .seccion-envios, .faq-container { 
+    opacity: 0; 
+    animation: fadeInUp 0.8s ease-out forwards; 
+}
+
+        
     </style>
 </head>
 <body>
