@@ -59,19 +59,18 @@ h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
 
 .grid-catalogo {
     display: grid;
-    /* Esto crea columnas de tamaño fijo que se adaptan al ancho disponible */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px; /* Más espacio entre tarjetas para que no se vean apretadas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     margin-top: 40px;
-    padding: 0 5%; /* Añade aire a los costados en pantallas grandes */
-    max-width: 1200px; /* Limita el ancho para que no se estiren demasiado */
+    padding: 0 5%;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .card {
     background: #222;
-    padding: 40px 20px; /* Más espacio interno para que se vea "miniatura" elegante */
+    padding: 20px;
     border-radius: 12px;
     border: 1px solid #333;
     text-align: center;
@@ -79,8 +78,17 @@ h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+    transform: translateY(-10px);
     border-color: var(--accent);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Esto evita que la imagen se estire o deforme */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;
 }
 
 .card h3 {
