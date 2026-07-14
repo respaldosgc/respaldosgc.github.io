@@ -72,4 +72,17 @@
       <image:caption>Respaldo estilo boho chic con funda desmontable 100% lavable y estructura protegida.</image:caption>
     </image:image>
   </url>
+
+  <url>
+    <loc>https://www.respaldosgc.com.ar/seleccion.html</loc>
+    <lastmod>2026-07-14T02:10:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.respaldosgc.com.ar/Seleccion/seleccion.webp</image:loc>
+      <image:title>Respaldo Nube Edición Selección Argentina - Respaldos G&amp;C</image:title>
+      <image:caption>Respaldo modelo Nube tapizado en pana celeste y blanco, inspirado en la Selección Argentina. Diseño moderno y artesanal.</image:caption>
+    </image:image>
+  </url>
+  
 </urlset>
