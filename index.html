@@ -141,6 +141,74 @@ h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
 /* Animaciones */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 section, .respaldo-container, .seccion-fabricacion, .seccion-medidas, .seccion-telas, .seccion-envios, .faq-container { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }   
+
+      .trust-section{
+    background:#111;
+    color:#fff;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.trust-section h2{
+    font-size:2rem;
+    margin-bottom:50px;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.trust-item{
+    background:#1d1d1d;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:15px;
+    padding:35px 25px;
+    transition:.3s;
+}
+
+.trust-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.trust-item h3{
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.trust-item p{
+    color:#cfcfcf;
+    line-height:1.7;
+}
+
+.trust-button{
+    margin-top:50px;
+}
+
+.trust-button a{
+    display:inline-block;
+    padding:16px 38px;
+    background:#c9a227;
+    color:#111;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.trust-button a:hover{
+    background:#e2bc46;
+}
+    
     </style>
 </head>
 <body>
@@ -166,7 +234,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>
 Fabricamos respaldos de cama tapizados a medida para sommier de una plaza, plaza y media, dos plazas, Queen y King. Venta directa de fábrica desde Don Torcuato con envíos a toda Argentina.
 </p>
-            <a href="https://wa.me/541130157350" class="btn-cta" target="_blank">CONSULTAR PRESUPUESTO</a>
+          <p style="font-size:18px;margin-bottom:20px;">
+⭐⭐⭐⭐⭐ <strong>5.0 en Google</strong> · Más de <strong>20 clientes</strong> ya recomendaron Respaldos G&C
+</p> 
+            <a href="https://wa.me/541130157350" class="btn-cta" target="_blank">📲 Solicitar Presupuesto por WhatsApp</a>
         </section>
 
         <section class="catalogo" style="background:#1a1a1a;color:white;">
@@ -174,16 +245,93 @@ Fabricamos respaldos de cama tapizados a medida para sommier de una plaza, plaza
 <h2>Respaldos de Cama Tapizados Fabricados a Medida</h2>
 
 <p>
+En <strong>Respaldos G&amp;C</strong> fabricamos respaldos de cama tapizados a medida, diseñados para brindar confort, elegancia y una terminación de alta calidad. Cada respaldo se confecciona artesanalmente con estructuras de madera reforzada, espumas de alta densidad y tapizados en pana, lino, chenille, teddy y otras telas premium cuidadosamente seleccionadas.
+</p>
 
-En Respaldos G&C somos fabricantes especializados en respaldos de cama tapizados para dormitorios modernos, clásicos y contemporáneos. Cada pieza se fabrica de manera artesanal utilizando estructuras de madera reforzada, espumas de alta densidad y una amplia variedad de telas seleccionadas.
+<p>
+Fabricamos respaldos para camas de 1 plaza, plaza y media, 2 plazas, Queen y King Size, adaptándonos a las medidas y necesidades de cada cliente. También realizamos proyectos personalizados para hoteles, departamentos, casas y desarrollos inmobiliarios.
+</p>
 
-Nuestros respaldos pueden confeccionarse para camas de una plaza, plaza y media, dos plazas, Queen Size y King Size, adaptando las medidas a cada proyecto.
+<p>
+Somos fabricantes en Don Torcuato, Zona Norte de Buenos Aires, y realizamos envíos a todo el país mediante transporte especializado.
+</p>
 
-Trabajamos directamente desde nuestra fábrica en Don Torcuato y realizamos envíos a toda Argentina mediante transporte especializado.
 
+<p>
+Elegí un respaldo fabricado por especialistas y renová tu dormitorio con un producto pensado para durar muchos años.
 </p>
 
 </section>
+<section class="trust-section">
+
+    <h2>¿Por qué elegir Respaldos G&C?</h2>
+
+    <div class="trust-grid">
+
+        <div class="trust-item">
+            <div class="icon">⭐</div>
+            <h3>5.0 en Google</h3>
+            <p>20 opiniones de clientes satisfechos que recomiendan nuestro trabajo.</p>
+        </div>
+
+        <div class="trust-item">
+            <div class="icon">🛏️</div>
+            <h3>Fabricación a Medida</h3>
+            <p>Cada respaldo se fabrica según las medidas, diseño y tela elegidos por cada cliente.</p>
+        </div>
+
+        <div class="trust-item">
+            <div class="icon">🚚</div>
+            <h3>Envíos a Todo el País</h3>
+            <p>Realizamos envíos mediante transporte especializado para que tu pedido llegue en perfectas condiciones.</p>
+        </div>
+
+        <div class="trust-item">
+            <div class="icon">🛡️</div>
+            <h3>Marca en trámite ante el INPI</h3>
+            <p>Respaldos G&C es una marca en proceso de registro, reafirmando nuestro compromiso con un proyecto sólido y profesional.</p>
+        </div>
+      
+      <div class="trust-item">
+    <div class="icon">🏭</div>
+    <h3>Fabricantes Directos</h3>
+    <p>Diseñamos y fabricamos cada respaldo sin intermediarios, garantizando calidad, atención personalizada y el mejor precio.</p>
+</div>
+
+    </div>
+
+    <div class="trust-button">
+        <a href="https://g.page/r/CSthqtFsJ7xmEAE/review" target="_blank">
+            ⭐ Ver opiniones de nuestros clientes
+        </a>
+      <p>⭐⭐⭐⭐⭐
+
+<strong>Fernanda Lencina</strong>
+
+"Captaron exactamente lo que quería. Quedaron realmente de lujo."
+
+⭐⭐⭐⭐⭐
+
+        <strong>Silvia</strong>
+
+"Estoy feliz con mi compra ❤️ el respaldo de cama realmente transformó el dormitorio, quedó precioso y le dio un toque de elegancia y calidez."
+
+⭐⭐⭐⭐⭐
+
+<strong>Denisse</strong>
+
+"Superó mis expectativas. La calidad es excelente."
+
+⭐⭐⭐⭐⭐
+
+<strong>Vanesa Córdoba</strong>
+
+"Muy bueno... lo recomiendo."</p>
+    </div>
+
+  
+
+</section> 
 
 <section id="catalogo" class="catalogo">
     <h2 style="color: var(--accent);">NUESTROS MODELOS</h2>
