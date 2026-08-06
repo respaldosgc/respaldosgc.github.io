@@ -87,7 +87,9 @@ content="Fabricamos respaldos de cama tapizados a medida. Venta directa de fábr
 
     <style>
     :root { --dark: #1a1a1a; --accent: #c5a059; --light: #ffffff; }
-body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--light); scroll-behavior: smooth; }
+body{
+    font-family:'Montserrat',sans-serif;
+}
 
 /* Menú profesional y fijo */
 nav { position: sticky; top: 0; background: rgba(26,26,26,0.95); backdrop-filter: blur(10px); display: flex; justify-content: space-between; padding: 15px 5%; align-items: center; border-bottom: 1px solid #333; z-index: 1000; }
@@ -261,30 +263,174 @@ footer p {
     position:relative;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(90deg,
-    rgba(0,0,0,.75),
-    rgba(0,0,0,.40));
+.hero{
+
+position:relative;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:0 30px;
+
+overflow:hidden;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+url("bg-respaldos.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+} 
+        .hero::after{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+background:
+
+radial-gradient(circle,
+
+rgba(201,162,39,.22),
+
+transparent 70%);
+
+top:-250px;
+
+right:-250px;
+
+filter:blur(60px);
+
+pointer-events:none;
+
+}
+        .hero h1{
+
+font-size:clamp(3rem,6vw,5.5rem);
+
+font-weight:800;
+
+line-height:1;
+
+max-width:900px;
+
+margin:auto;
+
+letter-spacing:-2px;
+
+text-shadow:
+
+0 10px 30px rgba(0,0,0,.6);
+
 }
 
-.hero *{
-    position:relative;
-    z-index:2;
-}
-
-.hero h1{
-    max-width:900px;
-    font-size:4rem;
-    line-height:1.1;
-}
 
 .hero p{
-    max-width:800px;
-    font-size:1.2rem;
+
+font-size:1.25rem;
+
+max-width:760px;
+
+margin:30px auto;
+
+line-height:1.8;
+
+color:#DDD;
+
 }
+
+
+    .btn-cta{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 46px;
+
+border-radius:100px;
+
+background:linear-gradient(135deg,#C9A227,#E4C157);
+
+color:#111;
+
+font-weight:700;
+
+font-size:18px;
+
+text-decoration:none;
+
+box-shadow:
+
+0 20px 45px rgba(201,162,39,.35);
+
+transition:.4s;
+
+}
+        .btn-cta:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 35px 70px rgba(201,162,39,.45);
+
+}
+        nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+right:0;
+
+padding:20px 5%;
+
+background:rgba(10,10,10,.55);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+transition:.4s;
+
+}
+        nav img{
+
+height:65px;
+
+transition:.4s;
+
+}
+
+nav img:hover{
+
+transform:scale(1.05);
+
+}
+
+        
+
+        
 
         .card,
 .trust-item,
@@ -301,13 +447,47 @@ footer p {
 
 }
 
-        .card{
-    overflow:hidden;
+     .card{
+
+position:relative;
+
+background:#171717;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.45s;
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.35);
+
+} 
+
+        .card img{
+
+height:380px;
+
+transition:.7s;
+
 }
 
-.card img{
+        .card img{
 
-transition:.6s;
+height:380px;
+
+transition:.7s;
+
+}
+
+        .card:hover{
+
+transform:translateY(-14px);
+
+box-shadow:
+
+0 35px 80px rgba(0,0,0,.55);
 
 }
 
@@ -316,6 +496,39 @@ transition:.6s;
 transform:scale(1.08);
 
 }
+
+        h2{
+
+font-size:clamp(2rem,5vw,3rem);
+
+margin-bottom:60px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+}
+
+        section{
+
+padding:120px 5%;
+
+}
+        body{
+
+background:
+
+radial-gradient(circle at top,#262626 0%,#151515 45%,#090909 100%);
+
+}
+
+
+
+
+
+
+
+        
 
         .btn-cta{
 
@@ -473,9 +686,34 @@ color:#FFD45A;
 
 }
 
-        
+ :root{
+
+--gold:#C9A227;
+
+--gold-hover:#E0B83D;
+
+--black:#0A0A0A;
+
+--dark:#111111;
+
+--card:#181818;
+
+--border:rgba(255,255,255,.08);
+
+--text:#F5F5F5;
+
+--gray:#BFBFBF;
+
+--shadow:0 20px 60px rgba(0,0,0,.45);
+
+}        
         
     </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
