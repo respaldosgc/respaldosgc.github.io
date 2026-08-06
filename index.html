@@ -86,22 +86,261 @@ content="Fabricamos respaldos de cama tapizados a medida. Venta directa de fábr
 </script>
 
     <style>
-    :root { --dark: #1a1a1a; --accent: #c5a059; --light: #ffffff; }
-body{
-    font-family:'Montserrat',sans-serif;
+    /* ===========================
+   VARIABLES GLOBALES
+=========================== */
+
+:root{
+
+    --gold:#C9A227;
+    --gold-hover:#E0B83D;
+
+    --black:#0A0A0A;
+    --dark:#111111;
+    --card:#181818;
+
+    --text:#F5F5F5;
+    --gray:#BFBFBF;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 20px 60px rgba(0,0,0,.45);
+
 }
 
-/* Menú profesional y fijo */
-nav { position: sticky; top: 0; background: rgba(26,26,26,0.95); backdrop-filter: blur(10px); display: flex; justify-content: space-between; padding: 15px 5%; align-items: center; border-bottom: 1px solid #333; z-index: 1000; }
-nav a { color: var(--light); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-left: 20px; transition: color 0.3s; }
-nav a:hover { color: var(--accent); }
+/* ===========================
+   RESET
+=========================== */
 
-/* Hero con efecto parallax sutil */
-.hero { padding: 120px 5%; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg-respaldos.jpg'); background-size: cover; background-attachment: fixed; }
-h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
-.btn-cta { background: var(--accent); color: var(--dark); padding: 15px 40px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; transition: transform 0.3s; }
-.btn-cta:hover { transform: scale(1.05); }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:var(--text);
+
+    background:
+    radial-gradient(circle at top,#262626 0%,#151515 45%,#090909 100%);
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   MENÚ
+=========================== */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 5%;
+
+    background:rgba(10,10,10,.55);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 10px 40px rgba(0,0,0,.45);
+
+    z-index:9999;
+
+}
+
+nav img{
+
+    height:65px;
+
+    transition:.35s;
+
+}
+
+nav img:hover{
+
+    transform:scale(1.05);
+
+}
+
+nav a{
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+    margin-left:18px;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:0 30px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+    url("bg-respaldos.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    top:-250px;
+    right:-250px;
+
+    background:
+    radial-gradient(circle,
+    rgba(201,162,39,.22),
+    transparent 70%);
+
+    filter:blur(60px);
+
+    pointer-events:none;
+
+}
+
+.hero h1{
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+    line-height:1;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    max-width:900px;
+
+    text-shadow:0 10px 30px rgba(0,0,0,.6);
+
+}
+
+.hero p{
+
+    max-width:760px;
+
+    margin:30px auto;
+
+    color:#DDD;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   BOTÓN PRINCIPAL
+=========================== */
+
+.btn-cta{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:30px;
+
+    padding:18px 46px;
+
+    border-radius:60px;
+
+    background:linear-gradient(135deg,var(--gold),#E4C157);
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    letter-spacing:1px;
+
+    box-shadow:0 20px 45px rgba(201,162,39,.35);
+
+    transition:.35s;
+
+}
+
+.btn-cta:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 35px 70px rgba(201,162,39,.45);
+
+}
 .grid-catalogo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -113,33 +352,101 @@ h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
     margin-right: auto;
 }
 
-.card {
-    background: #222;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+/* ===========================
+   CATÁLOGO
+=========================== */
+
+.grid-catalogo{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    max-width:1300px;
+
+    margin:60px auto 0;
+
+    padding:0 5%;
+
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent);
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    text-align:center;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:var(--shadow);
+
+    transition:
+        transform .45s,
+        box-shadow .45s,
+        border-color .45s;
+
 }
 
-.card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover; /* Esto evita que la imagen se estire o deforme */
-    border-radius: 8px;
-    margin-bottom: 15px;
-    display: block;
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:var(--gold);
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.55);
+
 }
 
-.card h3 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
+.card img{
+
+    width:100%;
+
+    height:380px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .7s;
+
 }
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.card h3{
+
+    color:var(--text);
+
+    font-size:1.35rem;
+
+    margin:25px 20px 10px;
+
+}
+
+.card p{
+
+    color:var(--gray);
+
+    line-height:1.7;
+
+    padding:0 20px 25px;
+
+} 
 
 /* Manteniendo tus secciones intactas */
 .respaldo-container, .seccion-fabricacion, .seccion-medidas, .seccion-telas, .seccion-envios, .faq-container { 
@@ -432,70 +739,7 @@ transform:scale(1.05);
 
         
 
-        .card,
-.trust-item,
-.feature-item{
 
-    background:rgba(255,255,255,.04);
-
-    backdrop-filter:blur(12px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.35);
-
-}
-
-     .card{
-
-position:relative;
-
-background:#171717;
-
-border-radius:20px;
-
-overflow:hidden;
-
-transition:.45s;
-
-box-shadow:
-
-0 20px 60px rgba(0,0,0,.35);
-
-} 
-
-        .card img{
-
-height:380px;
-
-transition:.7s;
-
-}
-
-        .card img{
-
-height:380px;
-
-transition:.7s;
-
-}
-
-        .card:hover{
-
-transform:translateY(-14px);
-
-box-shadow:
-
-0 35px 80px rgba(0,0,0,.55);
-
-}
-
-.card:hover img{
-
-transform:scale(1.08);
-
-}
 
         h2{
 
@@ -768,42 +1012,131 @@ Elegí un respaldo fabricado por especialistas y renová tu dormitorio con un pr
 </section>
 <section class="trust-section">
 
-    <h2>¿Por qué elegir Respaldos G&C?</h2>
+    <div class="container">
 
-    <div class="trust-grid">
+        <h2 class="title">¿Por qué elegir Respaldos G&C?</h2>
 
-        <div class="trust-item">
-            <div class="icon">⭐</div>
-            <h3>5.0 en Google</h3>
-            <p>20 opiniones de clientes satisfechos que recomiendan nuestro trabajo.</p>
+        <p class="trust-subtitle">
+            Fabricamos respaldos de cama tapizados a medida con materiales de primera calidad,
+            atención personalizada y envíos a todo el país.
+        </p>
+
+        <div class="grid">
+
+            <!-- Google -->
+            <div class="card">
+
+                <div class="icon-container">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+
+                </div>
+
+                <h3 class="card-title">
+                    <span class="rating-badge">5.0</span> en Google
+                </h3>
+
+                <p class="card-text">
+                    Más de 20 clientes recomiendan nuestro trabajo.
+                </p>
+
+            </div>
+
+            <!-- Medida -->
+
+            <div class="card">
+
+                <div class="icon-container">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/>
+                    </svg>
+
+                </div>
+
+                <h3 class="card-title">
+                    Fabricación a Medida
+                </h3>
+
+                <p class="card-text">
+                    Cada respaldo se fabrica según las medidas, diseño y tela elegidos por cada cliente.
+                </p>
+
+            </div>
+
+            <!-- Envíos -->
+
+            <div class="card">
+
+                <div class="icon-container">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 8h-3V4H4c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/>
+                    </svg>
+
+                </div>
+
+                <h3 class="card-title">
+                    Envíos a Todo el País
+                </h3>
+
+                <p class="card-text">
+                    Despachamos a toda Argentina con embalaje reforzado.
+                </p>
+
+            </div>
+
+            <!-- INPI -->
+
+            <div class="card">
+
+                <div class="icon-container">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                    </svg>
+
+                </div>
+
+                <h3 class="card-title">
+                    Marca en trámite ante el INPI
+                </h3>
+
+                <p class="card-text">
+                    Comprometidos con un proyecto sólido y profesional.
+                </p>
+
+            </div>
+
+            <!-- Fábrica -->
+
+            <div class="card">
+
+                <div class="icon-container">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M22 10v12H2V10l7-3v3l5-3v3z"/>
+                    </svg>
+
+                </div>
+
+                <h3 class="card-title">
+                    Fabricantes Directos
+                </h3>
+
+                <p class="card-text">
+                    Diseñamos y fabricamos cada respaldo sin intermediarios.
+                </p>
+
+            </div>
+
         </div>
-
-        <div class="trust-item">
-            <div class="icon">🛏️</div>
-            <h3>Fabricación a Medida</h3>
-            <p>Cada respaldo se fabrica según las medidas, diseño y tela elegidos por cada cliente.</p>
-        </div>
-
-        <div class="trust-item">
-            <div class="icon">🚚</div>
-            <h3>Envíos a Todo el País</h3>
-            <p>Realizamos envíos mediante transporte especializado para que tu pedido llegue en perfectas condiciones.</p>
-        </div>
-
-        <div class="trust-item">
-            <div class="icon">🛡️</div>
-            <h3>Marca en trámite ante el INPI</h3>
-            <p>Respaldos G&C es una marca en proceso de registro, reafirmando nuestro compromiso con un proyecto sólido y profesional.</p>
-        </div>
-      
-      <div class="trust-item">
-    <div class="icon">🏭</div>
-    <h3>Fabricantes Directos</h3>
-    <p>Diseñamos y fabricamos cada respaldo sin intermediarios, garantizando calidad, atención personalizada y el mejor precio.</p>
-</div>
 
     </div>
 
+</section>
     <div class="trust-button">
         <a href="https://g.page/r/CSthqtFsJ7xmEAE/review" target="_blank">
             ⭐ Ver opiniones de nuestros clientes
