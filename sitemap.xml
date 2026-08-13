@@ -84,5 +84,19 @@
       <image:caption>Respaldo modelo Nube tapizado en pana celeste y blanco, inspirado en la Selección Argentina. Diseño moderno y artesanal.</image:caption>
     </image:image>
   </url>
+
+  <url>
+  <loc>https://www.respaldosgc.com.ar/fractura.html</loc>
+  <lastmod>2026-08-13T00:00:00-03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+
+  <image:image>
+    <image:loc>https://www.respaldosgc.com.ar/fractura/fractura1.webp</image:loc>
+    <image:title>Respaldo de Cama Fractura - Respaldos G&amp;C</image:title>
+    <image:caption>Respaldo de cama Fractura de diseño moderno y fabricación artesanal a medida.</image:caption>
+  </image:image>
+</url>
+  
   
 </urlset>
