@@ -2001,6 +2001,380 @@
 
 
         
+ /* =====================================================
+   DESTACADO RESPALDO FRACTURA®
+   ===================================================== */
+
+.fractura-feature-section {
+    background: #111;
+    color: #fff;
+    padding: 80px 20px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.fractura-feature-container {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+    align-items: center;
+}
+
+
+/* IMAGEN */
+
+.fractura-feature-image {
+    position: relative;
+
+    width: 100%;
+
+    border-radius: 22px;
+    overflow: hidden;
+
+    border: 1px solid rgba(201,166,107,.3);
+
+    background: #080808;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.6);
+}
+
+.fractura-feature-image img {
+    width: 100%;
+    height: 520px;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    padding: 20px;
+}
+
+
+/* REGISTRO */
+
+.fractura-registration {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    z-index: 2;
+
+    background: rgba(0,0,0,.82);
+
+    color: #e2c48d;
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    font-size: .72rem;
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* CONTENIDO */
+
+.fractura-feature-content {
+    max-width: 560px;
+}
+
+.fractura-eyebrow {
+    display: block;
+
+    color: #e2c48d;
+
+    font-weight: 800;
+
+    font-size: .8rem;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
+}
+
+.fractura-feature-content h2 {
+    font-family: Georgia,"Times New Roman",serif;
+
+    font-size: clamp(2.2rem,4vw,3.5rem);
+
+    line-height: 1.02;
+
+    margin: 0 0 24px;
+
+    color: #fff;
+}
+
+.fractura-feature-content h2 span {
+    color: #e2c48d;
+}
+
+.fractura-feature-description {
+    color: #ccc;
+
+    font-size: 1.03rem;
+
+    line-height: 1.65;
+
+    margin: 0 0 16px;
+}
+
+.fractura-feature-description strong {
+    color: #fff;
+}
+
+
+/* CARACTERÍSTICAS */
+
+.fractura-feature-list {
+    list-style: none;
+
+    padding: 0;
+    margin: 25px 0;
+
+    display: grid;
+
+    gap: 11px;
+}
+
+.fractura-feature-list li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ddd;
+
+    font-size: .95rem;
+}
+
+.fractura-feature-list li span {
+    color: #e2c48d;
+
+    font-size: 1.05rem;
+
+    font-weight: 900;
+}
+
+
+/* ESPECIFICACIONES */
+
+.fractura-feature-specs {
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 10px;
+
+    margin: 28px 0;
+}
+
+.fractura-feature-specs div {
+    padding: 15px;
+
+    background: #181818;
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    border-radius: 14px;
+}
+
+.fractura-feature-specs small {
+    display: block;
+
+    color: #999;
+
+    font-size: .65rem;
+
+    font-weight: 800;
+
+    letter-spacing: .1em;
+
+    margin-bottom: 4px;
+}
+
+.fractura-feature-specs strong {
+    color: #e2c48d;
+
+    font-size: .9rem;
+}
+
+
+/* BOTONES */
+
+.fractura-feature-actions {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.fractura-btn-primary,
+.fractura-btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 23px;
+
+    border-radius: 999px;
+
+    font-weight: 800;
+
+    transition: .2s ease;
+}
+
+.fractura-btn-primary {
+    background:
+        linear-gradient(
+            135deg,
+            #e2c48d,
+            #c9a66b
+        );
+
+    color: #111;
+}
+
+.fractura-btn-primary:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.07);
+}
+
+.fractura-btn-secondary {
+    color: #fff;
+
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+.fractura-btn-secondary:hover {
+    border-color: #e2c48d;
+
+    color: #e2c48d;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .fractura-feature-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .fractura-feature-content {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .fractura-feature-section {
+        padding: 55px 15px;
+    }
+
+    .fractura-feature-container {
+        width: 100%;
+
+        gap: 32px;
+    }
+
+    .fractura-feature-image {
+        border-radius: 17px;
+    }
+
+    /*
+       IMPORTANTE:
+       En celular NO forzamos una altura.
+       La imagen conserva toda su proporción.
+    */
+
+    .fractura-feature-image img {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+
+        padding: 10px;
+    }
+
+    .fractura-registration {
+        top: 12px;
+        left: 12px;
+
+        font-size: .62rem;
+
+        padding: 6px 10px;
+    }
+
+    .fractura-feature-content h2 {
+        font-size: 2.25rem;
+
+        line-height: 1.05;
+    }
+
+    .fractura-feature-description {
+        font-size: .98rem;
+    }
+
+    .fractura-feature-specs {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .fractura-feature-specs div {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 13px 15px;
+    }
+
+    .fractura-feature-specs small {
+        margin: 0;
+    }
+
+    .fractura-feature-actions {
+        flex-direction: column;
+    }
+
+    .fractura-btn-primary,
+    .fractura-btn-secondary {
+        width: 100%;
+    }
+
+}
+
+
         
 
     </style>
@@ -2256,6 +2630,141 @@
 
             </div>
         </section> 
+
+
+        <!-- =====================================================
+     NUEVO LANZAMIENTO: RESPALDO FRACTURA®
+     MODELO INDUSTRIAL N.º 112746
+     ====================================================== -->
+
+<section class="fractura-feature-section">
+
+    <div class="fractura-feature-container">
+
+        <!-- IMAGEN PRINCIPAL -->
+
+        <div class="fractura-feature-image">
+
+            <span class="fractura-registration">
+                MODELO INDUSTRIAL N.º 112746
+            </span>
+
+            <img
+                src="fractura/fractura1.webp"
+                alt="Respaldo FRACTURA® con LED de Respaldos G&C"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <!-- CONTENIDO -->
+
+        <div class="fractura-feature-content">
+
+            <span class="fractura-eyebrow">
+                NUEVO LANZAMIENTO · RESPALDOS G&C
+            </span>
+
+            <h2>
+                Respaldo FRACTURA®
+                <br>
+                <span>Diseño que rompe lo convencional.</span>
+            </h2>
+
+            <p class="fractura-feature-description">
+                Descubrí <strong>FRACTURA®</strong>, nuestro respaldo de cama
+                de diseño exclusivo registrado ante el Instituto Nacional
+                de la Propiedad Industrial.
+            </p>
+
+            <p class="fractura-feature-description">
+                Una composición arquitectónica de líneas geométricas,
+                tapizada en pana premium y con una
+                <strong>fractura central que puede incorporar iluminación LED cálida</strong>
+                para transformar completamente el ambiente.
+            </p>
+
+
+            <!-- CARACTERÍSTICAS -->
+
+            <ul class="fractura-feature-list">
+
+                <li>
+                    <span>✓</span>
+                    <strong>Diseño exclusivo registrado</strong>
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    <strong>LED cálido 3000K opcional</strong>
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    <strong>Pana premium y espuma de alta densidad</strong>
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    <strong>Fabricación artesanal a medida</strong>
+                </li>
+
+            </ul>
+
+
+            <!-- MEDIDAS -->
+
+            <div class="fractura-feature-specs">
+
+                <div>
+                    <small>ALTURA</small>
+                    <strong>1,80 m</strong>
+                </div>
+
+                <div>
+                    <small>MEDIDAS</small>
+                    <strong>A medida</strong>
+                </div>
+
+                <div>
+                    <small>ILUMINACIÓN</small>
+                    <strong>LED opcional</strong>
+                </div>
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <div class="fractura-feature-actions">
+
+                <a
+                    href="fractura.html"
+                    class="fractura-btn-primary"
+                >
+                    Conocer FRACTURA®
+                </a>
+
+                <a
+                    href="https://wa.me/541130157350?text=Hola%20Respaldos%20G%26C%2C%20me%20interesa%20el%20Respaldo%20FRACTURA%C2%AE."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="fractura-btn-secondary"
+                >
+                    Consultar por WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        
 
 
         <!-- =====================================================
