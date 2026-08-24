@@ -2375,6 +2375,171 @@
 }
 
 
+
+
+        /* =====================================================
+   CATÁLOGO · SILLONES
+   ===================================================== */
+
+.catalogo-sillones {
+    background: #111;
+    color: #fff;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.catalogo-category {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.catalogo-category > span {
+    display: block;
+
+    color: #e2c48d;
+
+    font-size: .78rem;
+    font-weight: 800;
+
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.catalogo-category h2 {
+    margin: 0 0 14px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #fff;
+}
+
+.catalogo-category p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* CONTENEDOR DE IMAGEN */
+
+.card-image-wrap {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+/* BADGE INPI */
+
+.card-badge {
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    z-index: 2;
+
+    background: rgba(0,0,0,.82);
+
+    color: #e2c48d;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    font-size: .62rem;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+}
+
+
+/* IMAGEN DEL SILLÓN */
+
+.card-image-wrap img {
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    padding: 15px;
+
+    display: block;
+
+    transition: transform .35s ease;
+}
+
+
+/* EFECTO HOVER */
+
+.card:hover .card-image-wrap img {
+    transform: scale(1.03);
+}
+
+
+/* DESCRIPCIÓN */
+
+.card-description {
+    color: #aaa;
+
+    font-size: .9rem;
+
+    line-height: 1.55;
+
+    margin: 8px 0 18px;
+}
+
+
+/* EN CELULAR */
+
+@media (max-width: 600px) {
+
+    .catalogo-sillones {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .catalogo-category {
+        margin-bottom: 30px;
+    }
+
+    .catalogo-category h2 {
+        font-size: 2.2rem;
+    }
+
+    .card-image-wrap img {
+        height: auto;
+
+        min-height: 300px;
+
+        object-fit: contain;
+
+        padding: 10px;
+    }
+
+    .card-badge {
+        font-size: .55rem;
+
+        top: 10px;
+        left: 10px;
+    }
+
+}
+
+
+        
         
 
     </style>
@@ -3276,6 +3441,81 @@
             </div>
 
         </section>
+
+
+
+        <!-- =====================================================
+     CATÁLOGO · SILLONES
+     ====================================================== -->
+
+<section
+    id="sillones"
+    class="catalogo catalogo-sillones"
+>
+
+    <div class="catalogo-category">
+
+        <span>
+            MOBILIARIO DE DISEÑO
+        </span>
+
+        <h2>
+            Nuestros Sillones
+        </h2>
+
+        <p>
+            Diseños de autor, fabricación artesanal y piezas
+            pensadas para transformar los espacios.
+        </p>
+
+    </div>
+
+
+    <div class="grid-catalogo">
+
+        <!-- SILLÓN OCTA -->
+
+        <div class="card">
+
+            <div class="card-image-wrap">
+
+                <span class="card-badge">
+                    MODELO INDUSTRIAL N.º 111285
+                </span>
+
+                <img
+                    src="/octa/octa_perspectiva1.webp"
+                    alt="Sillón Octa ® modelo industrial N.º 111285"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <h3>
+                Sillón Octa ®
+            </h3>
+
+            <p class="card-description">
+                Diseño octagonal de vanguardia con estructura
+                geométrica, colchón integrado y almohada de
+                vellón siliconado.
+            </p>
+
+            <a
+                href="productos/octa.html"
+                class="card-link"
+            >
+                VER MÁS →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+        
 
 
         <!-- =====================================================
