@@ -1898,7 +1898,98 @@
             }
 
 
+                 /* =====================================================
+   HERO
+   ===================================================== */
+
+
             .hero {
+
+
+                /* =====================================================
+   HERO · BOTÓN PRINCIPAL
+   ===================================================== */
+
+.hero-actions {
+    margin-top: 28px;
+}
+
+.btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 15px 24px;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.btn-arrow {
+    width: 20px;
+    height: 20px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.btn-gold:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   HERO · ESTRELLAS GOOGLE
+   ===================================================== */
+
+.rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 20px;
+
+    font-size: 0.9rem;
+}
+
+.stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.stars svg {
+    width: 18px;
+    height: 18px;
+
+    fill: #f4b400;
+    display: block;
+}
+
+.rating-separator {
+    opacity: 0.45;
+}
+
+.rating strong {
+    font-weight: 700;
+}
+
+                
 
                 padding-left:
                     20px;
@@ -1940,9 +2031,21 @@
 
         }
 
+
+
+             /* =====================================================
+   POLITICAS
+   ===================================================== */
+
+
+        
+        
+        
+
         .politicas-link {
     margin-top: 15px;
 }
+
 
 .politicas-link a {
     display: inline-block;
@@ -2637,10 +2740,82 @@
      HERO
 ====================================================== -->
 
-<section class="hero"> <div class="hero-content"> <div class="eyebrow"> FABRICANTES · DON TORCUATO · BUENOS AIRES </div> 
-    <h1> Respaldos de Cama a Medida y Tapizados </h1> <p> Fabricamos respaldos de cama tapizados a medida para 1 plaza, 1½ plaza, 2 plazas, Queen y King. Diseñamos y producimos cada respaldo en nuestra fábrica de Don Torcuato, Buenos Aires, con diferentes medidas, diseños y telas. </p> <p class="hero-highlight"> Pana · Lino · Teddy · Tusor · Medidas personalizadas </p> <div class="hero-actions"> <a href="#catalogo" class="btn btn-gold"> Ver respaldos de cama </a>  </div> <p class="rating"> ⭐⭐⭐⭐⭐ <strong>5.0 en Google</strong> · Más de <strong>20 clientes</strong> recomiendan Respaldos G&C </p> 
-</div> 
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            FABRICANTES · DON TORCUATO · BUENOS AIRES
+        </div>
+
+        <h1>
+            Respaldos de Cama a Medida y Tapizados
+        </h1>
+
+        <p>
+            Fabricamos respaldos de cama tapizados a medida para 1 plaza,
+            1½ plaza, 2 plazas, Queen y King. Diseñamos y producimos cada
+            respaldo en nuestra fábrica de Don Torcuato, Buenos Aires,
+            con diferentes medidas, diseños y telas.
+        </p>
+
+        <p class="hero-highlight">
+            Pana · Lino · Teddy · Tusor · Medidas personalizadas
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#catalogo" class="btn btn-gold">
+                <span>Ver respaldos de cama</span>
+
+                <svg class="btn-arrow"
+                     viewBox="0 0 24 24"
+                     aria-hidden="true">
+                    <path d="M5 12h13M13 6l6 6-6 6"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+        </div>
+
+       <p class="rating">
+
+    <span class="stars" aria-label="5 estrellas">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5z"/>
+        </svg>
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5z"/>
+        </svg>
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5z"/>
+        </svg>
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5z"/>
+        </svg>
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5z"/>
+        </svg>
+    </span>
+
+    <strong>5.0 en Google</strong>
+    <span class="rating-separator">·</span>
+    Más de <strong>20 clientes</strong> recomiendan Respaldos G&C
+
+</p> 
+
+    </div>
+
 </section>
+        
         <!-- =====================================================
              INTRODUCCIÓN
         ====================================================== -->
