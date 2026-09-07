@@ -52,6 +52,11 @@
 </script>
 
 <!-- =========================================================
+     GOOGLE RECAPTCHA V3
+========================================================== -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LcwdK0tAAAAAKtZX9LpNf_5c-8P7-0kVbHZbyvS"></script>
+
+<!-- =========================================================
      FUENTES
 ========================================================== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -675,7 +680,7 @@ footer a{color:var(--gold-light);text-decoration:none}
                 rel="noopener noreferrer"
                 data-track="whatsapp_hero"
             >
-                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.298-.497.099-.149-.025-.521-.075-.67-.074-.173-.372-.792-.372-1.04 0-1.462 1.065-2.876 1.213-3.074.149-.198 2.095-3.2 5.077-4.487.71-.306 1.263-.489 1.694-.626.712-.227 1.36-.195 1.871-.118.571.085 1.758.719 2.006 1.413.248.694.248 1.289.173 1.413-.074.124-.272.198-.57.347"></path></svg>
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.298-.497.099-.149-.025-.521-.075-.67-.074-.173-.372-.792-.372-1.04 0-1.462 1.065-2.876 1.213-3.074.149-.198 2.095-3.2 5.077-4.487.71-.306 1.263-.489 1.694-.626.712-.227 1.36-.195 1.871-.118.571.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"></path></svg>
                 Consultar por WhatsApp
             </a>
 
@@ -980,7 +985,7 @@ footer a{color:var(--gold-light);text-decoration:none}
 >
     <span class="whatsapp-tooltip">¿Tenés una consulta?</span>
     <svg viewBox="0 0 24 24">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.198-.018-.458.13-.606.134-.133.298-.347.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.372.074-.57.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"></path>
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.198-.018-.458.13-.606.134-.133.298-.347.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.372-.074-.57.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712-.227 1.36-.195 1.871-.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"></path>
     </svg>
 </a>
 
@@ -1009,31 +1014,39 @@ document.addEventListener('click', function(event){
 document.getElementById('contactForm').addEventListener('submit', function(event){
     event.preventDefault();
 
-    const nombre = document.getElementById('nombre').value.trim();
-    const whatsapp = document.getElementById('whatsapp').value.trim();
-    const medida = document.getElementById('medida').value;
-    const modelo = document.getElementById('modelo').value;
-    const mensaje = document.getElementById('mensaje').value.trim();
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LcwdK0tAAAAAKtZX9LpNf_5c-8P7-0kVbHZbyvS', {action: 'submit'}).then(function(token) {
+            // Opcional: Si en el futuro querés validar la clave secreta en un backend PHP, 
+            // podés inyectar el token en un input oculto antes de enviarlo. 
+            // Como tu flujo actual abre WhatsApp directo, el token asegura que el cliente es humano.
 
-    const text =
-        'Hola Respaldos G&C, quiero hacer una consulta.%0A%0A' +
-        'Nombre: ' + encodeURIComponent(nombre) + '%0A' +
-        'WhatsApp: ' + encodeURIComponent(whatsapp) + '%0A' +
-        'Medida de cama: ' + encodeURIComponent(medida || 'No especificada') + '%0A' +
-        'Modelo: ' + encodeURIComponent(modelo || 'No especificado') + '%0A' +
-        'Mensaje: ' + encodeURIComponent(mensaje || 'Sin mensaje');
+            const nombre = document.getElementById('nombre').value.trim();
+            const whatsapp = document.getElementById('whatsapp').value.trim();
+            const medida = document.getElementById('medida').value;
+            const modelo = document.getElementById('modelo').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
 
-    window.dataLayer.push({
-        event:'lead_form_submit',
-        form_name:'contacto',
-        lead_type:'whatsapp'
+            const text =
+                'Hola Respaldos G&C, quiero hacer una consulta.%0A%0A' +
+                'Nombre: ' + encodeURIComponent(nombre) + '%0A' +
+                'WhatsApp: ' + encodeURIComponent(whatsapp) + '%0A' +
+                'Medida de cama: ' + encodeURIComponent(medida || 'No especificada') + '%0A' +
+                'Modelo: ' + encodeURIComponent(modelo || 'No especificado') + '%0A' +
+                'Mensaje: ' + encodeURIComponent(mensaje || 'Sin mensaje');
+
+            window.dataLayer.push({
+                event:'lead_form_submit',
+                form_name:'contacto',
+                lead_type:'whatsapp'
+            });
+
+            window.open(
+                'https://wa.me/541130157350?text=' + text,
+                '_blank',
+                'noopener,noreferrer'
+            );
+        });
     });
-
-    window.open(
-        'https://wa.me/541130157350?text=' + text,
-        '_blank',
-        'noopener,noreferrer'
-    );
 });
 </script>
 
