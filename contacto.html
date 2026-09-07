@@ -178,6 +178,11 @@ button,input,select,textarea{font:inherit}
 button{cursor:pointer}
 noscript iframe{display:none}
 
+/* OCULTAR BADGE DE RECAPTCHA (Mantiene el sistema anti-spam funcionando sin romper el diseño) */
+.grecaptcha-badge {
+    visibility: hidden !important;
+}
+
 /* HEADER */
 header{
     position:sticky;
@@ -555,6 +560,16 @@ footer{
 }
 footer strong{color:#d0d0d0}
 footer a{color:var(--gold-light);text-decoration:none}
+.recaptcha-legal{
+    margin-top:10px;
+    font-size:0.65rem;
+    color:#666;
+    line-height:1.5;
+}
+.recaptcha-legal a{
+    color:#888;
+    text-decoration:underline;
+}
 
 /* FLOAT */
 .whatsapp-float{
@@ -973,6 +988,12 @@ footer a{color:var(--gold-light);text-decoration:none}
         <a href="tel:+541130157350">11 3015-7350</a>
     </p>
     <p>&copy; 2026 Respaldos G&C. Todos los derechos reservados.</p>
+    
+    <div class="recaptcha-legal">
+        Este sitio está protegido por reCAPTCHA y se aplican la 
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad</a> y los 
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Términos de Servicio</a> de Google.
+    </div>
 </footer>
 
 <a
@@ -1016,10 +1037,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     grecaptcha.ready(function() {
         grecaptcha.execute('6LcwdK0tAAAAAKtZX9LpNf_5c-8P7-0kVbHZbyvS', {action: 'submit'}).then(function(token) {
-            // Opcional: Si en el futuro querés validar la clave secreta en un backend PHP, 
-            // podés inyectar el token en un input oculto antes de enviarlo. 
-            // Como tu flujo actual abre WhatsApp directo, el token asegura que el cliente es humano.
-
             const nombre = document.getElementById('nombre').value.trim();
             const whatsapp = document.getElementById('whatsapp').value.trim();
             const medida = document.getElementById('medida').value;
