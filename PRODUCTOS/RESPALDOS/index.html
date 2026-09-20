@@ -23,95 +23,155 @@
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
+  "@context": "https://schema.org",
+  "@graph": [
+
     {
-      "@type":"CollectionPage",
-      "@id":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/#page",
-"url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/",
-      "name":"Modelos de respaldos de cama a medida",
-      "description":"Catálogo de modelos de respaldos de cama tapizados de Respaldos G&C.",
-      "isPartOf":{"@id":"https://respaldosgc.com.ar/#website"},
-      "about":{"@type":"Thing","name":"Respaldos de cama tapizados"}
+      "@type": "WebSite",
+      "@id": "https://respaldosgc.com.ar/#website",
+      "url": "https://respaldosgc.com.ar/",
+      "name": "Respaldos G&C",
+      "inLanguage": "es-AR",
+      "publisher": {
+        "@id": "https://respaldosgc.com.ar/#business"
+      }
     },
+
     {
-      "@type":"WebSite",
-      "@id":"https://www.respaldosgc.com.ar/PRODUCTOS/RESPALDOS/#page",
-"url":"https://www.respaldosgc.com.ar/PRODUCTOS/RESPALDOS/",
-      "name":"Respaldos G&C"
-    },
-    {
-      "@type":"FurnitureStore",
-      "@id":"https://respaldosgc.com.ar/#business",
-      "name":"Respaldos G&C",
-      "url":"https://respaldosgc.com.ar/",
-      "telephone":"+541130157350",
-      "email":"info@respaldosgc.com.ar",
-      "address":{
-        "@type":"PostalAddress",
-        "streetAddress":"Boulogne Sur Mer 1348",
-        "addressLocality":"Don Torcuato",
-        "addressRegion":"Buenos Aires",
-        "postalCode":"B1611",
-        "addressCountry":"AR"
+      "@type": "FurnitureStore",
+      "@id": "https://respaldosgc.com.ar/#business",
+      "name": "Respaldos G&C",
+      "url": "https://respaldosgc.com.ar/",
+      "telephone": "+541130157350",
+      "email": "info@respaldosgc.com.ar",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Boulogne Sur Mer 1348",
+        "addressLocality": "Don Torcuato",
+        "addressRegion": "Buenos Aires",
+        "postalCode": "B1611",
+        "addressCountry": "AR"
       },
-      "sameAs":[
+      "sameAs": [
         "https://www.instagram.com/respaldosgyc/",
         "https://www.facebook.com/respaldos.gyc/",
         "https://www.pinterest.com/respaldosgyc/"
       ]
     },
+
     {
-      "@type":"ItemList",
-      "name":"Modelos de respaldos de cama Respaldos G&C",
-      "numberOfItems":10,
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Respaldo Sharpei","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/SHARPEI/"},
-        {"@type":"ListItem","position":2,"name":"FRACTURA Class","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/"},
-        {"@type":"ListItem","position":3,"name":"FRACTURA Curve","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CURVE/"},
-        {"@type":"ListItem","position":4,"name":"Wall Premium","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/WALL/"},
-        {"@type":"ListItem","position":5,"name":"Clásico","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/CLASICO/"},
-        {"@type":"ListItem","position":6,"name":"Supraclass","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/SUPRACLASS/"},
-        {"@type":"ListItem","position":7,"name":"Nube","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/NUBE/"},
-        {"@type":"ListItem","position":8,"name":"Canelón","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/CANELON/"},
-        {"@type":"ListItem","position":9,"name":"Fundas","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/CON-FUNDA/"},
-        {"@type":"ListItem","position":10,"name":"Respaldo inspirado en la Selección","url":"https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/SELECCION/"}
+      "@type": "CollectionPage",
+      "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/#page",
+      "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/",
+      "name": "Respaldos de cama a medida",
+      "description": "Modelos de respaldos de cama tapizados, modernos, clásicos y premium, fabricados a medida por Respaldos G&C en Don Torcuato, Buenos Aires.",
+      "inLanguage": "es-AR",
+      "isPartOf": {
+        "@id": "https://respaldosgc.com.ar/#website"
+      },
+      "about": {
+        "@type": "ProductGroup",
+        "name": "Respaldos de cama"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://respaldosgc.com.ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Productos",
+          "item": "https://respaldosgc.com.ar/PRODUCTOS/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Respaldos de cama"
+        }
       ]
     },
+
     {
-      "@type":"FAQPage",
-      "mainEntity":[
+      "@type": "ItemList",
+      "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/#modelos",
+      "name": "Modelos de respaldos de cama Respaldos G&C",
+      "numberOfItems": 10,
+      "itemListElement": [
         {
-          "@type":"Question",
-          "name":"¿Fabrican respaldos de cama a medida?",
-          "acceptedAnswer":{"@type":"Answer","text":"Sí. Respaldos G&C fabrica respaldos de cama a medida y adapta cada proyecto según las dimensiones y el estilo del dormitorio."}
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Respaldo Sharpei",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/SHARPEI/"
         },
         {
-          "@type":"Question",
-          "name":"¿Qué medidas de cama pueden fabricar?",
-          "acceptedAnswer":{"@type":"Answer","text":"Trabajamos con camas de 1 plaza, plaza y media, 2 plazas, Queen, King y Super King. También se pueden consultar medidas especiales."}
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FRACTURA Class",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/"
         },
         {
-          "@type":"Question",
-          "name":"¿Puedo elegir la tela y el color?",
-          "acceptedAnswer":{"@type":"Answer","text":"Sí. Podés consultar las telas, colores y terminaciones disponibles para el modelo que elijas."}
+          "@type": "ListItem",
+          "position": 3,
+          "name": "FRACTURA Curve",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CURVE/"
         },
         {
-          "@type":"Question",
-          "name":"¿Cómo puedo pedir precio de un respaldo?",
-          "acceptedAnswer":{"@type":"Answer","text":"Podés solicitar una cotización por WhatsApp indicando modelo, medida de cama, tela o color y localidad."}
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Wall Premium",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/WALL/"
         },
         {
-          "@type":"Question",
-          "name":"¿Realizan envíos a todo el país?",
-          "acceptedAnswer":{"@type":"Answer","text":"Sí. Respaldos G&C realiza envíos a distintos puntos de Argentina mediante transporte y embalaje adecuado."}
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Respaldo Clásico",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/CLASICO/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Respaldo Supraclass",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/SUPRACLASS/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Respaldo Nube",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/NUBE/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Respaldo Canelón",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/CANELON/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Respaldo con Funda",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/CON-FUNDA/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Respaldo inspirado en la Selección",
+          "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/SELECCION/"
         }
       ]
     }
+
   ]
 }
 </script>
-
+  
 <style>
 :root{
   --gold:#C9A227;
@@ -295,10 +355,11 @@ footer a{color:var(--gold2)}
     <div class="eyebrow">FABRICANTES · DON TORCUATO · BUENOS AIRES</div>
     <h1>Modelos de <span>respaldos de cama</span> a medida</h1>
     <p>
-      Descubrí nuestra colección de respaldos de cama tapizados:
-      diseños modernos, clásicos, premium y propuestas especiales.
-      Elegí el modelo, la medida, la tela y el color para crear un respaldo pensado para tu dormitorio.
-    </p>
+  Somos fabricantes de respaldos de cama a medida en Don Torcuato,
+  Zona Norte de Buenos Aires. Diseñamos y fabricamos respaldos tapizados
+  modernos, clásicos y premium, adaptados a las medidas de tu cama.
+  Elegí el modelo, la tela, el color y las terminaciones.
+</p>
     <div class="hero-actions">
       <a class="btn btn-gold" href="#modelos">Ver todos los modelos →</a>
       <a class="btn btn-outline" href="https://wa.me/541130157350?text=Hola%20Respaldos%20G%26C%2C%20quiero%20asesoramiento%20para%20elegir%20un%20respaldo." target="_blank" rel="noopener">Necesito asesoramiento</a>
@@ -342,7 +403,7 @@ footer a{color:var(--gold2)}
       <button class="filter" data-filter="moderno">Modernos</button>
       <button class="filter" data-filter="premium">Premium</button>
       <button class="filter" data-filter="clasico">Clásicos</button>
-      <button class="filter" data-filter="medida">A medida</button>
+      <button class="filter" data-filter="medida">A Medida</button>
       <button class="filter" data-filter="especial">Especiales</button>
     </div>
 
@@ -404,7 +465,10 @@ footer a{color:var(--gold2)}
         <div class="model-body">
           <div class="model-kicker">Pared a pared</div>
           <h3>Wall Premium</h3>
-          <p>Una solución integral para ocupar el ancho de la pared y conseguir un dormitorio sofisticado y visualmente uniforme.</p>
+          <p>
+         Respaldo de cama Wall Premium fabricado a medida,
+         ideal para proyectos de pared a pared y dormitorios de diseño.
+         </p>
           <div class="model-bottom">
             <a class="model-link" href="/PRODUCTOS/RESPALDOS/WALL/">Ver modelo →</a>
             <a class="model-quote" href="https://wa.me/541130157350?text=Hola%20Respaldos%20G%26C%2C%20quiero%20cotizar%20Wall%20Premium." target="_blank" rel="noopener">Cotizar</a>
@@ -451,8 +515,11 @@ footer a{color:var(--gold2)}
         </div>
         <div class="model-body">
           <div class="model-kicker">Acolchado</div>
-          <h3>Nube</h3>
-          <p>Un diseño acolchado pensado para aportar comodidad, calidez y una estética envolvente al dormitorio.</p>
+          <h3>Respaldo Nube</h3>
+          <p>
+         Respaldo de cama Nube acolchado y fabricado a medida,
+         pensado para aportar volumen, comodidad y calidez al dormitorio.
+          </p>
           <div class="model-bottom">
             <a class="model-link" href="/PRODUCTOS/RESPALDOS/NUBE/">Ver modelo →</a>
             <a class="model-quote" href="https://wa.me/541130157350?text=Hola%20Respaldos%20G%26C%2C%20quiero%20cotizar%20Nube." target="_blank" rel="noopener">Cotizar</a>
@@ -468,7 +535,10 @@ footer a{color:var(--gold2)}
         <div class="model-body">
           <div class="model-kicker">Diseño con gajos</div>
           <h3>Canelón</h3>
-          <p>Un diseño de líneas y volumen que aporta textura visual y personalidad sin perder elegancia.</p>
+          <p>
+         Respaldo de cama Canelón con gajos verticales,
+        fabricado a medida en diferentes telas y colores.
+          </p>
           <div class="model-bottom">
             <a class="model-link" href="/PRODUCTOS/RESPALDOS/CANELON/">Ver modelo →</a>
             <a class="model-quote" href="https://wa.me/541130157350?text=Hola%20Respaldos%20G%26C%2C%20quiero%20cotizar%20Canel%C3%B3n." target="_blank" rel="noopener">Cotizar</a>
@@ -483,8 +553,11 @@ footer a{color:var(--gold2)}
         </div>
         <div class="model-body">
           <div class="model-kicker">Alternativa versátil</div>
-          <h3>Fundas</h3>
-          <p>Una alternativa para renovar y proteger el respaldo, con una propuesta práctica y diferentes posibilidades de terminación.</p>
+          <h3>Respaldo con funda</h3>
+          <p>
+         Respaldo de cama con funda desmontable y lavable,
+         una alternativa práctica para renovar y proteger el respaldo.
+         </p>
           <div class="model-bottom">
             <a class="model-link" href="/PRODUCTOS/RESPALDOS/CON-FUNDA/">Ver modelo →</a>
             <a class="model-quote" href="https://wa.me/541130157350?text=Hola%20Respaldos%20G%26C%2C%20quiero%20consultar%20por%20Fundas." target="_blank" rel="noopener">Cotizar</a>
@@ -512,6 +585,58 @@ footer a{color:var(--gold2)}
   </div>
 </section>
 
+<section class="seo-value">
+  <div class="container">
+
+    <div class="eyebrow">FABRICACIÓN PERSONALIZADA</div>
+
+    <h2>Respaldos de cama <span>a medida</span></h2>
+
+    <p class="seo-lead">
+      Cada dormitorio tiene sus propias proporciones. Por eso fabricamos
+      respaldos de cama adaptados al ancho de la cama, altura disponible,
+      estilo del ambiente y terminaciones que elijas.
+    </p>
+
+    <div class="seo-grid">
+    <h2>Respaldos de cama fabricados a medida</h2>
+      
+      <article>
+        <h3>Medidas personalizadas</h3>
+        <p>
+          Fabricamos respaldos para camas de 1 plaza, 1½ plaza,
+          2 plazas, Queen, King y Super King, además de medidas especiales.
+        </p>
+      </article>
+
+      <article>
+        <h3>Telas y colores</h3>
+        <p>
+          Podés consultar distintas opciones de pana, lino, Teddy,
+          Tusor y otras terminaciones según el modelo.
+        </p>
+      </article>
+
+      <article>
+        <h3>Diseños para cada dormitorio</h3>
+        <p>
+          Desde respaldos clásicos y minimalistas hasta diseños
+          protagonistas como Wall, Sharpei y FRACTURA.
+        </p>
+      </article>
+
+      <article>
+        <h3>Fabricación directa</h3>
+        <p>
+          Fabricamos en Don Torcuato, Buenos Aires, con atención
+          personalizada y envíos a diferentes puntos de Argentina.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+  
 <section class="feature">
   <div class="container feature-grid">
     <div class="feature-image">
