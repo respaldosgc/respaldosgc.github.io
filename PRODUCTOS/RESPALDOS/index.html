@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -70,8 +71,14 @@
         "@id": "https://respaldosgc.com.ar/#website"
       },
       "about": {
-        "@type": "ProductGroup",
+        "@type": "Thing",
         "name": "Respaldos de cama"
+      },
+      "breadcrumb": {
+        "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/#modelos"
       }
     },
 
@@ -94,7 +101,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Respaldos de cama"
+          "name": "Respaldos de cama",
+          "item": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/"
         }
       ]
     },
@@ -103,7 +111,9 @@
       "@type": "ItemList",
       "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/#modelos",
       "name": "Modelos de respaldos de cama Respaldos G&C",
+      "description": "Modelos de respaldos de cama a medida fabricados por Respaldos G&C.",
       "numberOfItems": 10,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
           "@type": "ListItem",
