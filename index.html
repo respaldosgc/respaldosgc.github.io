@@ -82,81 +82,71 @@
          DATOS ESTRUCTURADOS
     ========================================================== -->
 
-    <script type="application/ld+json">
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
     {
-        "@context": "https://schema.org",
-        "@graph": [
+      "@type": "WebSite",
+      "@id": "https://respaldosgc.com.ar/#website",
+      "url": "https://respaldosgc.com.ar/",
+      "name": "Respaldos G&C",
+      "description": "Fabricación de respaldos de cama a medida y tapizados en Don Torcuato, Buenos Aires.",
+      "inLanguage": "es-AR",
+      "publisher": {
+        "@id": "https://respaldosgc.com.ar/#business"
+      }
+    },
 
-            {
-                "@type": "FurnitureStore",
-                "@id": "https://respaldosgc.com.ar/#business",
+    {
+      "@type": "WebPage",
+      "@id": "https://respaldosgc.com.ar/#webpage",
+      "url": "https://respaldosgc.com.ar/",
+      "name": "Respaldos de Cama a Medida y Tapizados | Respaldos G&C",
+      "description": "Fabricamos respaldos de cama a medida y tapizados en Don Torcuato, Buenos Aires. Modelos modernos, pana, lino y teddy. Venta directa de fábrica y envíos a todo el país.",
+      "inLanguage": "es-AR",
+      "isPartOf": {
+        "@id": "https://respaldosgc.com.ar/#website"
+      },
+      "about": {
+        "@id": "https://respaldosgc.com.ar/#business"
+      },
+      "publisher": {
+        "@id": "https://respaldosgc.com.ar/#business"
+      }
+    },
 
-                "name": "Respaldos G&C",
-
-                "url": "https://respaldosgc.com.ar/",
-
-                "telephone": "+541130157350",
-
-                "email": "info@respaldosgc.com.ar",
-
-                "image": "https://respaldosgc.com.ar/logos/logo-event.webp",
-
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Boulogne Sur Mer 1348",
-                    "addressLocality": "Don Torcuato",
-                    "addressRegion": "Buenos Aires",
-                    "postalCode": "B1611",
-                    "addressCountry": "AR"
-                },
-
-                "sameAs": [
-                    "https://www.instagram.com/respaldosgyc/",
-                    "https://www.facebook.com/respaldos.gyc/",
-                    "https://www.pinterest.com/respaldosgyc/"
-                ]
-            },
-
-            {
-                "@type": "Product",
-
-                "name": "Respaldo de Cama a Medida",
-
-                "image": [
-                    "https://respaldosgc.com.ar/Seleccion/seleccion.webp"
-                ],
-
-                "description":
-                    "Respaldo de cama fabricado a medida artesanalmente. Diseño moderno y elegante para dormitorios.",
-
-                "brand": {
-                    "@type": "Brand",
-                    "name": "Respaldos G&C"
-                },
-
-                "offers": {
-                    "@type": "Offer",
-
-                    "url":
-                        "https://respaldosgc.com.ar/",
-
-                    "priceCurrency": "ARS",
-
-                    "price": "320000",
-
-                    "priceValidUntil": "2027-12-31",
-
-                    "availability":
-                        "https://schema.org/InStock",
-
-                    "itemCondition":
-                        "https://schema.org/NewCondition"
-                }
-            }
-
-        ]
+    {
+      "@type": "FurnitureStore",
+      "@id": "https://respaldosgc.com.ar/#business",
+      "name": "Respaldos G&C",
+      "url": "https://respaldosgc.com.ar/",
+      "telephone": "+541130157350",
+      "email": "info@respaldosgc.com.ar",
+      "image": "https://respaldosgc.com.ar/logos/logo-event.webp",
+      "description": "Fabricante de respaldos de cama a medida y tapizados en Don Torcuato, Buenos Aires, con venta directa de fábrica y envíos a todo el país.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Boulogne Sur Mer 1348",
+        "addressLocality": "Don Torcuato",
+        "addressRegion": "Buenos Aires",
+        "postalCode": "B1611",
+        "addressCountry": "AR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/respaldosgyc/",
+        "https://www.facebook.com/respaldos.gyc/",
+        "https://www.pinterest.com/respaldosgyc/"
+      ]
     }
-    </script>
+
+  ]
+}
+</script>
+
+
 
     <!-- =========================================================
          ESTILOS
