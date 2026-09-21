@@ -478,34 +478,51 @@
        TABLE
     ========================================================== */
 
-    .styled-table{
-      width:100%;
-      border-collapse:collapse;
-      margin-top:20px;
-      background:#fff;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-    }
+    /* =========================================================
+   TABLA DE MEDIDAS
+========================================================= */
 
-    .styled-table th,
-    .styled-table td{
-      padding:16px 20px;
-      text-align:left;
-      border-bottom:1px solid #eae5de;
-    }
+.styled-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  margin-top:20px;
+  background:#ffffff;
+  color:#171717;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
 
-    .styled-table th{
-      background:var(--ink);
-      color:var(--gold2);
-      font-weight:700;
-      letter-spacing:.05em;
-    }
+.styled-table th,
+.styled-table td{
+  padding:17px 20px;
+  text-align:left;
+  border-bottom:1px solid #e3ded6;
+  color:#171717;
+  background:#ffffff;
+}
 
-    .styled-table tr:last-child td{
-      border-bottom:none;
-    }
+.styled-table th{
+  background:#171717;
+  color:var(--gold2);
+  font-weight:800;
+  letter-spacing:.05em;
+}
 
+.styled-table td strong{
+  color:#171717;
+  font-weight:800;
+}
+
+.styled-table tr:last-child td{
+  border-bottom:none;
+}
+
+/* Mejor lectura de filas */
+.styled-table tbody tr:hover td{
+  background:#f7f3ed;
+}
     /* =========================================================
        FAQ
     ========================================================== */
