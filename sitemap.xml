@@ -31,6 +31,20 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- OUTLET DE RESPALDOS -->
+  <url>
+    <loc>https://respaldosgc.com.ar/OUTLET/</loc>
+    <lastmod>2026-09-22T00:00:00-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://respaldosgc.com.ar/sharpei/sharpei-1.webp</image:loc>
+      <image:title>Outlet de Respaldos de Cama - Respaldos G&amp;C</image:title>
+      <image:caption>Outlet de respaldos de cama de Respaldos G&amp;C, con unidades únicas, stock limitado y disponibilidad para entrega inmediata.</image:caption>
+    </image:image>
+  </url>
+
+
   <!-- ÍNDICE DE PRODUCTOS -->
   <url>
     <loc>https://respaldosgc.com.ar/PRODUCTOS/</loc>
