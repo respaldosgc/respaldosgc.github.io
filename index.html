@@ -3183,85 +3183,125 @@
      OUTLET RESPALDOS G&C · CAMPAÑA SEPTIEMBRE 2026
 ========================================================== -->
 
-<section class="outlet-home"
-         aria-labelledby="outlet-home-title"
-         data-outlet-end="2026-09-30T23:59:59-03:00">
+<section
+    class="outlet-home"
+    aria-labelledby="outlet-home-title"
+    data-outlet-end="2026-09-30T23:59:59-03:00"
+>
 
-  <div class="outlet-home__glow" aria-hidden="true"></div>
+    <div class="outlet-home__inner">
 
-  <div class="outlet-home__content">
+        <!-- IDENTIFICADOR DE CAMPAÑA -->
 
-    <span class="outlet-home__eyebrow">
-      <span class="outlet-home__fire" aria-hidden="true">🔥</span>
-      <h2>OUTLET DE RESPALDOS G&C</h2>
-      <span class="outlet-home__fire" aria-hidden="true">🔥</span>
-    </span>
+        <div class="outlet-home__header">
 
-    <h2 id="outlet-home-title">
-      Diseños únicos. Stock limitado. Entrega inmediata.
-    </h2>
+            <span class="outlet-home__label">
+                OUTLET
+            </span>
 
-    <p>
-      Descubrí nuestra selección de respaldos de cama disponibles
-      para entrega inmediata. Unidades únicas, modelos discontinuados
-      y oportunidades especiales de Respaldos G&C.
-    </p>
+            <span class="outlet-home__period">
+                SEPTIEMBRE · 2026
+            </span>
 
-    <!-- CONTADOR -->
-    <div class="outlet-home__countdown"
-         aria-label="Tiempo restante de la campaña Outlet">
-
-      <span class="outlet-home__countdown-label">
-        LA OPORTUNIDAD TERMINA EN
-      </span>
-
-      <div class="outlet-home__timer" aria-live="polite">
-
-        <div class="outlet-home__time">
-          <strong id="outlet-days">00</strong>
-          <span>DÍAS</span>
         </div>
 
-        <span class="outlet-home__separator">:</span>
 
-        <div class="outlet-home__time">
-          <strong id="outlet-hours">00</strong>
-          <span>HS</span>
+        <!-- CONTENIDO PRINCIPAL -->
+
+        <div class="outlet-home__content">
+
+            <div class="outlet-home__copy">
+
+                <span class="outlet-home__eyebrow">
+                    RESPALDOS G&C
+                </span>
+
+                <h2 id="outlet-home-title">
+                    Oportunidades seleccionadas.
+                    <span>Disponibles para entrega inmediata.</span>
+                </h2>
+
+                <p>
+                    Descubrí unidades únicas, modelos discontinuados
+                    y piezas seleccionadas con disponibilidad inmediata.
+                    Una selección especial de Respaldos G&C, sujeta a stock.
+                </p>
+
+                <div class="outlet-home__details">
+                    <span>UNIDADES ÚNICAS</span>
+                    <i></i>
+                    <span>STOCK LIMITADO</span>
+                    <i></i>
+                    <span>ENTREGA INMEDIATA</span>
+                </div>
+
+            </div>
+
+
+            <!-- PANEL DE CUENTA REGRESIVA -->
+
+            <div class="outlet-home__campaign">
+
+                <span class="outlet-home__campaign-label">
+                    LA CAMPAÑA FINALIZA EN
+                </span>
+
+                <div
+                    class="outlet-home__timer"
+                    aria-live="polite"
+                    aria-label="Tiempo restante de la campaña Outlet"
+                >
+
+                    <div class="outlet-home__time">
+                        <strong id="outlet-days">00</strong>
+                        <span>DÍAS</span>
+                    </div>
+
+                    <div class="outlet-home__divider"></div>
+
+                    <div class="outlet-home__time">
+                        <strong id="outlet-hours">00</strong>
+                        <span>HORAS</span>
+                    </div>
+
+                    <div class="outlet-home__divider"></div>
+
+                    <div class="outlet-home__time">
+                        <strong id="outlet-minutes">00</strong>
+                        <span>MIN</span>
+                    </div>
+
+                    <div class="outlet-home__divider"></div>
+
+                    <div class="outlet-home__time">
+                        <strong id="outlet-seconds">00</strong>
+                        <span>SEG</span>
+                    </div>
+
+                </div>
+
+                <a
+                    href="/OUTLET/"
+                    class="outlet-home__cta"
+                    title="Ver Outlet de Respaldos G&C"
+                    aria-label="Ver respaldos de cama disponibles en el Outlet de Respaldos G&C"
+                >
+                    <span>VER OUTLET</span>
+                    <strong>→</strong>
+                </a>
+
+                <span class="outlet-home__availability">
+                    Consultá las unidades disponibles
+                </span>
+
+            </div>
+
         </div>
 
-        <span class="outlet-home__separator">:</span>
-
-        <div class="outlet-home__time">
-          <strong id="outlet-minutes">00</strong>
-          <span>MIN</span>
-        </div>
-
-        <span class="outlet-home__separator">:</span>
-
-        <div class="outlet-home__time">
-          <strong id="outlet-seconds">00</strong>
-          <span>SEG</span>
-        </div>
-
-      </div>
     </div>
 
-    <a
-      href="/OUTLET/"
-      class="outlet-home__cta"
-      title="Ver Outlet de respaldos de cama de Respaldos G&C"
-      aria-label="Ver respaldos de cama disponibles en el Outlet de Respaldos G&C"
-    >
-      VER OUTLET
-      <span aria-hidden="true">→</span>
-    </a>
-
-    <span class="outlet-home__stock">
-       UNIDADES ÚNICAS · STOCK LIMITADO
-    </span>
-
-  </div>
 </section>
+
 
 <!-- =========================================================
      OUTLET · COUNTDOWN
@@ -3270,63 +3310,101 @@
 <script>
 (function () {
 
-  const outlet = document.querySelector('.outlet-home');
+    const outlet = document.querySelector('.outlet-home');
 
-  if (!outlet) return;
+    if (!outlet) return;
 
-  const endDate = new Date(
-    outlet.dataset.outletEnd
-  ).getTime();
+    const endDate = new Date(
+        outlet.dataset.outletEnd
+    ).getTime();
 
-  const days = document.getElementById('outlet-days');
-  const hours = document.getElementById('outlet-hours');
-  const minutes = document.getElementById('outlet-minutes');
-  const seconds = document.getElementById('outlet-seconds');
+    const daysElement =
+        document.getElementById('outlet-days');
 
-  function updateCountdown() {
+    const hoursElement =
+        document.getElementById('outlet-hours');
 
-    const now = Date.now();
-    const distance = endDate - now;
+    const minutesElement =
+        document.getElementById('outlet-minutes');
 
-    if (distance <= 0) {
+    const secondsElement =
+        document.getElementById('outlet-seconds');
 
-      days.textContent = '00';
-      hours.textContent = '00';
-      minutes.textContent = '00';
-      seconds.textContent = '00';
 
-      outlet.classList.add('outlet-home--finished');
+    function updateCountdown() {
 
-      const label = outlet.querySelector(
-        '.outlet-home__countdown-label'
-      );
+        const distance = endDate - Date.now();
 
-      if (label) {
-        label.textContent = 'CAMPAÑA FINALIZADA';
-      }
 
-      return;
+        if (distance <= 0) {
+
+            daysElement.textContent = '00';
+            hoursElement.textContent = '00';
+            minutesElement.textContent = '00';
+            secondsElement.textContent = '00';
+
+            outlet.classList.add(
+                'outlet-home--finished'
+            );
+
+            const label =
+                outlet.querySelector(
+                    '.outlet-home__campaign-label'
+                );
+
+            if (label) {
+                label.textContent =
+                    'CAMPAÑA FINALIZADA';
+            }
+
+            return;
+        }
+
+
+        const totalSeconds =
+            Math.floor(distance / 1000);
+
+        const days =
+            Math.floor(totalSeconds / 86400);
+
+        const hours =
+            Math.floor(
+                (totalSeconds % 86400) / 3600
+            );
+
+        const minutes =
+            Math.floor(
+                (totalSeconds % 3600) / 60
+            );
+
+        const seconds =
+            totalSeconds % 60;
+
+
+        daysElement.textContent =
+            String(days).padStart(2, '0');
+
+        hoursElement.textContent =
+            String(hours).padStart(2, '0');
+
+        minutesElement.textContent =
+            String(minutes).padStart(2, '0');
+
+        secondsElement.textContent =
+            String(seconds).padStart(2, '0');
     }
 
-    const totalSeconds = Math.floor(distance / 1000);
 
-    const d = Math.floor(totalSeconds / 86400);
-    const h = Math.floor((totalSeconds % 86400) / 3600);
-    const m = Math.floor((totalSeconds % 3600) / 60);
-    const s = totalSeconds % 60;
+    updateCountdown();
 
-    days.textContent = String(d).padStart(2, '0');
-    hours.textContent = String(h).padStart(2, '0');
-    minutes.textContent = String(m).padStart(2, '0');
-    seconds.textContent = String(s).padStart(2, '0');
-  }
-
-  updateCountdown();
-
-  setInterval(updateCountdown, 1000);
+    setInterval(
+        updateCountdown,
+        1000
+    );
 
 })();
 </script>
+
 
 
 
