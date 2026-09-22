@@ -3178,15 +3178,23 @@
 
 </section>
 
+
 <!-- =========================================================
-     OUTLET RESPALDOS G&C
+     OUTLET RESPALDOS G&C · CAMPAÑA SEPTIEMBRE 2026
 ========================================================== -->
 
-<section class="outlet-home" aria-labelledby="outlet-home-title">
+<section class="outlet-home"
+         aria-labelledby="outlet-home-title"
+         data-outlet-end="2026-09-30T23:59:59-03:00">
+
+  <div class="outlet-home__glow" aria-hidden="true"></div>
+
   <div class="outlet-home__content">
 
     <span class="outlet-home__eyebrow">
-     · OUTLET DE RESPALDOS G&C · 
+      <span class="outlet-home__fire" aria-hidden="true">🔥</span>
+      OUTLET DE RESPALDOS G&C
+      <span class="outlet-home__fire" aria-hidden="true">🔥</span>
     </span>
 
     <h2 id="outlet-home-title">
@@ -3199,18 +3207,128 @@
       y oportunidades especiales de Respaldos G&C.
     </p>
 
+    <!-- CONTADOR -->
+    <div class="outlet-home__countdown"
+         aria-label="Tiempo restante de la campaña Outlet">
+
+      <span class="outlet-home__countdown-label">
+        LA OPORTUNIDAD TERMINA EN
+      </span>
+
+      <div class="outlet-home__timer" aria-live="polite">
+
+        <div class="outlet-home__time">
+          <strong id="outlet-days">00</strong>
+          <span>DÍAS</span>
+        </div>
+
+        <span class="outlet-home__separator">:</span>
+
+        <div class="outlet-home__time">
+          <strong id="outlet-hours">00</strong>
+          <span>HS</span>
+        </div>
+
+        <span class="outlet-home__separator">:</span>
+
+        <div class="outlet-home__time">
+          <strong id="outlet-minutes">00</strong>
+          <span>MIN</span>
+        </div>
+
+        <span class="outlet-home__separator">:</span>
+
+        <div class="outlet-home__time">
+          <strong id="outlet-seconds">00</strong>
+          <span>SEG</span>
+        </div>
+
+      </div>
+    </div>
+
     <a
       href="/OUTLET/"
       class="outlet-home__cta"
-      title="Ver Outlet de respaldos de cama Respaldos G&C"
+      title="Ver Outlet de respaldos de cama de Respaldos G&C"
       aria-label="Ver respaldos de cama disponibles en el Outlet de Respaldos G&C"
     >
       VER OUTLET
       <span aria-hidden="true">→</span>
     </a>
 
+    <span class="outlet-home__stock">
+       UNIDADES ÚNICAS · STOCK LIMITADO
+    </span>
+
   </div>
 </section>
+
+<!-- =========================================================
+     OUTLET · COUNTDOWN
+========================================================== -->
+
+<script>
+(function () {
+
+  const outlet = document.querySelector('.outlet-home');
+
+  if (!outlet) return;
+
+  const endDate = new Date(
+    outlet.dataset.outletEnd
+  ).getTime();
+
+  const days = document.getElementById('outlet-days');
+  const hours = document.getElementById('outlet-hours');
+  const minutes = document.getElementById('outlet-minutes');
+  const seconds = document.getElementById('outlet-seconds');
+
+  function updateCountdown() {
+
+    const now = Date.now();
+    const distance = endDate - now;
+
+    if (distance <= 0) {
+
+      days.textContent = '00';
+      hours.textContent = '00';
+      minutes.textContent = '00';
+      seconds.textContent = '00';
+
+      outlet.classList.add('outlet-home--finished');
+
+      const label = outlet.querySelector(
+        '.outlet-home__countdown-label'
+      );
+
+      if (label) {
+        label.textContent = 'CAMPAÑA FINALIZADA';
+      }
+
+      return;
+    }
+
+    const totalSeconds = Math.floor(distance / 1000);
+
+    const d = Math.floor(totalSeconds / 86400);
+    const h = Math.floor((totalSeconds % 86400) / 3600);
+    const m = Math.floor((totalSeconds % 3600) / 60);
+    const s = totalSeconds % 60;
+
+    days.textContent = String(d).padStart(2, '0');
+    hours.textContent = String(h).padStart(2, '0');
+    minutes.textContent = String(m).padStart(2, '0');
+    seconds.textContent = String(s).padStart(2, '0');
+  }
+
+  updateCountdown();
+
+  setInterval(updateCountdown, 1000);
+
+})();
+</script>
+
+
 
 
         
