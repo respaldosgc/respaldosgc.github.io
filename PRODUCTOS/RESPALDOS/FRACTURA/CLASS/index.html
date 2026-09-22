@@ -153,141 +153,114 @@
   >
 
 
-  <!-- =========================================================
-       STRUCTURED DATA
-       ORGANIZATION + WEBSITE + WEBPAGE + PRODUCT + BREADCRUMB
-  ========================================================== -->
+ <!-- =========================================================
+     STRUCTURED DATA
+     ORGANIZATION + WEBSITE + WEBPAGE + BREADCRUMB
+========================================================== -->
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
 
-      {
-        "@type": "Organization",
-        "@id": "https://respaldosgc.com.ar/#business",
-        "name": "Respaldos G&C",
-        "url": "https://respaldosgc.com.ar/",
-        "telephone": "+54 11 3015-7350",
-        "email": "info@respaldosgc.com.ar",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Boulogne Sur Mer 1348",
-          "addressLocality": "Don Torcuato",
-          "addressRegion": "Buenos Aires",
-          "addressCountry": "AR"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Argentina"
-        },
-        "sameAs": [
-          "https://www.instagram.com/respaldosgyc/",
-          "https://www.facebook.com/RespaldosGC/",
-          "https://www.pinterest.com/respaldosgyc/"
-        ]
+    {
+      "@type": "Organization",
+      "@id": "https://respaldosgc.com.ar/#business",
+      "name": "Respaldos G&C",
+      "url": "https://respaldosgc.com.ar/",
+      "telephone": "+54 11 3015-7350",
+      "email": "info@respaldosgc.com.ar",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Boulogne Sur Mer 1348",
+        "addressLocality": "Don Torcuato",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
       },
-
-
-      {
-        "@type": "WebSite",
-        "@id": "https://respaldosgc.com.ar/#website",
-        "url": "https://respaldosgc.com.ar/",
-        "name": "Respaldos G&C",
-        "publisher": {
-          "@id": "https://respaldosgc.com.ar/#business"
-        },
-        "inLanguage": "es-AR"
+      "areaServed": {
+        "@type": "Country",
+        "name": "Argentina"
       },
+      "sameAs": [
+        "https://www.instagram.com/respaldosgyc/",
+        "https://www.facebook.com/RespaldosGC/",
+        "https://www.pinterest.com/respaldosgyc/"
+      ]
+    },
 
-
-      {
-        "@type": "WebPage",
-        "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#webpage",
-        "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/",
-        "name": "Respaldo FRACTURA® Class | Diseño con LED | Respaldos G&C",
-        "description": "Respaldo FRACTURA® Class a medida con fractura central, altura imponente y LED opcional. Diseño registrado y fabricación artesanal en Don Torcuato.",
-        "inLanguage": "es-AR",
-        "dateModified": "2026-09-21",
-        "isPartOf": {
-          "@id": "https://respaldosgc.com.ar/#website"
-        },
-        "about": {
-          "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#product"
-        },
-        "breadcrumb": {
-          "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#breadcrumb"
-        },
-        "publisher": {
-          "@id": "https://respaldosgc.com.ar/#business"
-        }
+    {
+      "@type": "WebSite",
+      "@id": "https://respaldosgc.com.ar/#website",
+      "url": "https://respaldosgc.com.ar/",
+      "name": "Respaldos G&C",
+      "publisher": {
+        "@id": "https://respaldosgc.com.ar/#business"
       },
+      "inLanguage": "es-AR"
+    },
 
-
-      {
-        "@type": "Product",
-        "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#product",
-        "name": "Respaldo FRACTURA® Class a Medida",
-        "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/",
-        "image": [
-          "https://respaldosgc.com.ar/fractura/respaldo-cama-fractura-class.webp"
-        ],
-        "description": "Respaldo de cama FRACTURA® Class a medida, caracterizado por una fractura central que aumenta visualmente con el ancho del respaldo. Fabricado artesanalmente con estructura reforzada, espuma de alta densidad, tapizado y opción de iluminación LED.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Respaldos G&C"
-        },
-        "category": "Respaldo de cama tapizado",
-        "material": "Pana premium, espuma de alta densidad y madera reforzada",
-        "countryOfOrigin": {
-          "@type": "Country",
-          "name": "Argentina"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#webpage"
-        }
+    {
+      "@type": "WebPage",
+      "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#webpage",
+      "url": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/",
+      "name": "Respaldo FRACTURA® Class | Diseño con LED | Respaldos G&C",
+      "description": "Respaldo FRACTURA® Class a medida con fractura central, altura imponente y LED opcional. Diseño registrado y fabricación artesanal en Don Torcuato.",
+      "inLanguage": "es-AR",
+      "dateModified": "2026-09-22",
+      "isPartOf": {
+        "@id": "https://respaldosgc.com.ar/#website"
       },
-
-
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#breadcrumb",
-        "itemListElement": [
-
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Inicio",
-            "item": "https://respaldosgc.com.ar/"
-          },
-
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Respaldos de cama",
-            "item": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/"
-          },
-
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "FRACTURA®",
-            "item": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/"
-          },
-
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "FRACTURA® Class",
-            "item": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/"
-          }
-
-        ]
+      "breadcrumb": {
+        "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://respaldosgc.com.ar/fractura/respaldo-cama-fractura-class.webp"
+      },
+      "publisher": {
+        "@id": "https://respaldosgc.com.ar/#business"
       }
+    },
 
-    ]
-  }
-  </script>
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/#breadcrumb",
+      "itemListElement": [
+
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://respaldosgc.com.ar/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Respaldos de cama",
+          "item": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "FRACTURA®",
+          "item": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "FRACTURA® Class",
+          "item": "https://respaldosgc.com.ar/PRODUCTOS/RESPALDOS/FRACTURA/CLASS/"
+        }
+
+      ]
+    }
+
+  ]
+}
+</script>
 
 
   <!-- =========================================================
