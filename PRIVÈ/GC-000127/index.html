@@ -1,0 +1,1743 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- IMPORTANTE:
+     Esta página está pensada para NO aparecer en Google.
+     Además de robots.txt, usamos noindex.
+-->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+
+<title>G&C Privé | Respaldos G&C</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   G&C PRIVÉ
+   PREMIUM EXPERIENCE
+   ========================================================= */
+
+:root {
+    --bg: #080808;
+    --bg-soft: #111111;
+    --white: #f4f2ed;
+    --muted: #a5a29b;
+    --gold: #c7a86a;
+    --gold-soft: rgba(199,168,106,.25);
+    --line: rgba(255,255,255,.12);
+    --ease: cubic-bezier(.16,1,.3,1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: var(--bg);
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   PRELOADER
+   ========================================================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #050505;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        opacity 1s var(--ease),
+        visibility 1s var(--ease);
+}
+
+#loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-inner {
+    text-align: center;
+}
+
+.loader-logo {
+    font-size: 24px;
+    letter-spacing: .45em;
+    margin-left: .45em;
+    font-weight: 300;
+}
+
+.loader-line {
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    margin: 25px auto 0;
+    animation: loading 1.7s var(--ease) forwards;
+}
+
+@keyframes loading {
+    to { width: 180px; }
+}
+
+/* =========================================================
+   CURSOR
+   ========================================================= */
+
+.cursor {
+    position: fixed;
+    width: 9px;
+    height: 9px;
+    background: var(--white);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+
+.cursor-ring {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 28px 5vw;
+
+    transition:
+        background .6s ease,
+        padding .6s ease,
+        backdrop-filter .6s ease;
+}
+
+.nav.scrolled {
+    padding: 18px 5vw;
+    background: rgba(5,5,5,.72);
+    backdrop-filter: blur(18px);
+}
+
+.logo {
+    font-size: 15px;
+    letter-spacing: .45em;
+    margin-left: .45em;
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    color: rgba(255,255,255,.72);
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    transition: color .3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    height: 100vh;
+    min-height: 720px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.2) 45%,
+            rgba(0,0,0,.92)
+        ),
+        url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2200&q=90")
+        center/cover;
+
+    transform: scale(1.08);
+    animation: heroZoom 2.4s var(--ease) forwards;
+}
+
+@keyframes heroZoom {
+    to { transform: scale(1); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 8vw 9vh;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: .45em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(58px, 10vw, 150px);
+    line-height: .85;
+    font-weight: 300;
+    letter-spacing: -.06em;
+    max-width: 1000px;
+}
+
+.hero-subtitle {
+    margin-top: 35px;
+    max-width: 470px;
+    color: rgba(255,255,255,.7);
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 35px;
+    right: 5vw;
+    z-index: 5;
+
+    writing-mode: vertical-rl;
+    font-size: 9px;
+    letter-spacing: .35em;
+    color: rgba(255,255,255,.55);
+}
+
+.scroll-line {
+    width: 1px;
+    height: 65px;
+    background: linear-gradient(
+        to bottom,
+        var(--gold),
+        transparent
+    );
+    margin-top: 15px;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section {
+    position: relative;
+}
+
+.section-dark {
+    background: var(--bg);
+}
+
+.section-soft {
+    background: #0e0e0e;
+}
+
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+.section-padding {
+    padding: 150px 0;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: .45em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: clamp(45px, 7vw, 100px);
+    font-weight: 300;
+    line-height: .95;
+    letter-spacing: -.055em;
+}
+
+.section-text {
+    max-width: 550px;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 100px;
+    align-items: end;
+}
+
+.intro-big {
+    font-size: clamp(45px, 6vw, 85px);
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: -.05em;
+}
+
+.intro-big span {
+    color: var(--gold);
+}
+
+.intro-side {
+    padding-bottom: 8px;
+}
+
+/* =========================================================
+   PRODUCT
+   ========================================================= */
+
+.product-section {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.product-image {
+    height: 85vh;
+    min-height: 650px;
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.95),
+            transparent 50%
+        ),
+        url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2200&q=90")
+        center/cover;
+}
+
+.product-info {
+    margin-top: -230px;
+    position: relative;
+    z-index: 3;
+    padding-bottom: 130px;
+}
+
+.product-card {
+    width: min(600px, 90%);
+    background: rgba(8,8,8,.82);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--line);
+    padding: 50px;
+}
+
+.product-id {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: .35em;
+    margin-bottom: 25px;
+}
+
+.product-name {
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: -.04em;
+}
+
+.product-details {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.detail-label {
+    font-size: 9px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.detail-value {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.benefits {
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(199,168,106,.12),
+            transparent 35%
+        ),
+        #090909;
+}
+
+.benefits-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 50px;
+    margin-bottom: 90px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.benefit {
+    min-height: 350px;
+    padding: 50px 40px;
+    border-right: 1px solid var(--line);
+    transition:
+        background .5s ease,
+        transform .5s var(--ease);
+}
+
+.benefit:last-child {
+    border-right: none;
+}
+
+.benefit:hover {
+    background: rgba(255,255,255,.035);
+    transform: translateY(-5px);
+}
+
+.benefit-number {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: .25em;
+}
+
+.benefit h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+.benefit p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* =========================================================
+   DISCOUNT
+   ========================================================= */
+
+.discount {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.85)
+        ),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90")
+        center/cover fixed;
+}
+
+.discount-content {
+    width: 100%;
+}
+
+.discount-small {
+    color: var(--gold);
+    letter-spacing: .45em;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.discount-number {
+    font-size: clamp(100px, 20vw, 280px);
+    font-weight: 200;
+    line-height: .8;
+    letter-spacing: -.08em;
+    margin: 50px 0;
+}
+
+.discount-text {
+    color: rgba(255,255,255,.7);
+    max-width: 480px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 45px;
+    padding: 18px 35px;
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 9px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+
+    transition:
+        background .4s ease,
+        color .4s ease,
+        border-color .4s ease,
+        transform .4s var(--ease);
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+/* =========================================================
+   CRAFT
+   ========================================================= */
+
+.craft-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    min-height: 100vh;
+}
+
+.craft-image {
+    background:
+        url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1600&q=90")
+        center/cover;
+}
+
+.craft-content {
+    padding: 120px 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.craft-content .section-text {
+    margin-top: 45px;
+}
+
+.craft-list {
+    margin-top: 60px;
+}
+
+.craft-item {
+    padding: 25px 0;
+    border-top: 1px solid var(--line);
+
+    display: flex;
+    justify-content: space-between;
+
+    color: rgba(255,255,255,.8);
+    font-size: 13px;
+}
+
+.craft-item span:first-child {
+    color: #666;
+}
+
+/* =========================================================
+   CARE
+   ========================================================= */
+
+.care-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-top: 1px solid var(--line);
+}
+
+.care-item {
+    padding: 60px;
+    min-height: 250px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.care-item:nth-child(2n) {
+    border-right: none;
+}
+
+.care-number {
+    color: var(--gold);
+    font-size: 10px;
+}
+
+.care-item h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 45px;
+}
+
+.care-item p {
+    color: var(--muted);
+    margin-top: 15px;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.final {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(199,168,106,.12),
+            transparent 40%
+        ),
+        #070707;
+}
+
+.final-logo {
+    font-size: 13px;
+    letter-spacing: .55em;
+    margin-left: .55em;
+}
+
+.final-title {
+    font-size: clamp(60px, 11vw, 150px);
+    line-height: .85;
+    font-weight: 300;
+    letter-spacing: -.07em;
+    margin-top: 45px;
+}
+
+.final-text {
+    color: var(--muted);
+    margin: 40px auto 0;
+    max-width: 480px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 35px 5vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #666;
+    font-size: 9px;
+    letter-spacing: .2em;
+}
+
+/* =========================================================
+   REVEAL ANIMATIONS
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(70px);
+    transition:
+        opacity 1.2s var(--ease),
+        transform 1.2s var(--ease);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-70px);
+    transition:
+        opacity 1.2s var(--ease),
+        transform 1.2s var(--ease);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .nav {
+        padding: 20px 6vw;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .hero {
+        min-height: 680px;
+    }
+
+    .hero-content {
+        padding: 0 7vw 12vh;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .section-padding {
+        padding: 100px 0;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .product-image {
+        height: 70vh;
+        min-height: 550px;
+    }
+
+    .product-card {
+        padding: 30px;
+    }
+
+    .product-name {
+        font-size: 40px;
+    }
+
+    .benefits-header {
+        display: block;
+        margin-bottom: 60px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .benefit:last-child {
+        border-bottom: none;
+    }
+
+    .discount {
+        background-attachment: scroll;
+    }
+
+    .craft-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .craft-image {
+        min-height: 65vh;
+    }
+
+    .craft-content {
+        padding: 90px 7vw;
+    }
+
+    .care-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .care-item {
+        border-right: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .cursor,
+    .cursor-ring {
+        display: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ======================================================
+     LOADER
+     ====================================================== -->
+
+<div id="loader">
+
+    <div class="loader-inner">
+
+        <div class="loader-logo">
+            G&C
+        </div>
+
+        <div class="loader-line"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     CURSOR
+     ====================================================== -->
+
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+
+
+<!-- ======================================================
+     NAV
+     ====================================================== -->
+
+<nav class="nav">
+
+    <div class="logo">
+        RESPALDOS G&C
+    </div>
+
+    <div class="nav-right">
+
+        <a href="#beneficios" class="nav-link">
+            Privé
+        </a>
+
+        <a href="#producto" class="nav-link">
+            Tu producto
+        </a>
+
+        <a href="#contacto" class="nav-link">
+            Contacto
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="hero">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-content reveal">
+
+        <div class="eyebrow">
+            Experiencia exclusiva
+        </div>
+
+        <h1>
+            G&C<br>
+            Privé.
+        </h1>
+
+        <p class="hero-subtitle">
+            Tu compra abrió una puerta.
+            Descubrí una experiencia creada
+            especialmente para quienes eligieron
+            Respaldos G&C.
+        </p>
+
+    </div>
+
+    <div class="scroll-indicator">
+
+        DESCUBRIR
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     INTRO
+     ====================================================== -->
+
+<section class="intro section-dark section-padding">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+            <div class="intro-big reveal">
+
+                Hay productos que comprás.
+
+                <br><br>
+
+                Y hay productos que
+                <span>pasan a formar parte
+                de tu espacio.</span>
+
+            </div>
+
+            <div class="intro-side reveal">
+
+                <div class="section-label">
+                    G&C Privé
+                </div>
+
+                <p class="section-text">
+
+                    Gracias por elegir Respaldos G&C.
+                    Esta experiencia fue creada para
+                    acompañarte también después de tu compra.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     PRODUCTO
+     ====================================================== -->
+
+<section id="producto" class="product-section section-dark">
+
+    <div class="product-image"></div>
+
+    <div class="container product-info">
+
+        <div class="product-card reveal">
+
+            <div class="product-id">
+                G&C ID · GC-000127
+            </div>
+
+            <div class="product-name">
+                Tu G&C
+            </div>
+
+            <div class="product-details">
+
+                <div>
+                    <div class="detail-label">
+                        Modelo
+                    </div>
+
+                    <div class="detail-value">
+                        Canelón
+                    </div>
+                </div>
+
+                <div>
+                    <div class="detail-label">
+                        Medida
+                    </div>
+
+                    <div class="detail-value">
+                        240 × 120 cm
+                    </div>
+                </div>
+
+                <div>
+                    <div class="detail-label">
+                        Tapizado
+                    </div>
+
+                    <div class="detail-value">
+                        Panè Beige
+                    </div>
+                </div>
+
+                <div>
+                    <div class="detail-label">
+                        Fabricación
+                    </div>
+
+                    <div class="detail-value">
+                        Octubre 2026
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     BENEFICIOS
+     ====================================================== -->
+
+<section id="beneficios"
+         class="benefits section-padding">
+
+    <div class="container">
+
+        <div class="benefits-header reveal">
+
+            <div>
+
+                <div class="section-label">
+                    G&C Privé
+                </div>
+
+                <h2 class="section-title">
+                    Beneficios<br>
+                    reservados.
+                </h2>
+
+            </div>
+
+            <p class="section-text">
+
+                Tu experiencia G&C continúa después
+                de la compra.
+
+            </p>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+            <article class="benefit reveal">
+
+                <div class="benefit-number">
+                    01
+                </div>
+
+                <h3>
+                    Beneficios exclusivos
+                </h3>
+
+                <p>
+                    Accedé a promociones y condiciones
+                    especiales disponibles para clientes G&C.
+                </p>
+
+            </article>
+
+
+            <article class="benefit reveal">
+
+                <div class="benefit-number">
+                    02
+                </div>
+
+                <h3>
+                    Personalización
+                </h3>
+
+                <p>
+                    Descubrí nuevas opciones para seguir
+                    transformando tu espacio.
+                </p>
+
+            </article>
+
+
+            <article class="benefit reveal">
+
+                <div class="benefit-number">
+                    03
+                </div>
+
+                <h3>
+                    Acceso anticipado
+                </h3>
+
+                <p>
+                    Conocé nuevos diseños y colecciones
+                    antes de su lanzamiento general.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     DESCUENTO
+     ====================================================== -->
+
+<section class="discount">
+
+    <div class="discount-content reveal">
+
+        <div class="discount-small">
+            Beneficio Privé
+        </div>
+
+        <div class="discount-number">
+            15%
+        </div>
+
+        <p class="discount-text">
+
+            Un beneficio exclusivo para tu
+            próxima compra seleccionada.
+
+            <br><br>
+
+            Disponible para clientes G&C.
+
+        </p>
+
+        <a
+            href="https://wa.me/5491100000000?text=Hola%2C%20soy%20cliente%20G%26C%20Priv%C3%A9%20y%20quiero%20utilizar%20mi%20beneficio."
+            class="btn"
+            target="_blank"
+        >
+            Utilizar beneficio
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CRAFT
+     ====================================================== -->
+
+<section class="craft">
+
+    <div class="craft-grid">
+
+        <div class="craft-image reveal-left"></div>
+
+        <div class="craft-content">
+
+            <div class="section-label reveal">
+                El proceso
+            </div>
+
+            <h2 class="section-title reveal">
+                Hecho<br>
+                para vos.
+            </h2>
+
+            <p class="section-text reveal">
+
+                Detrás de cada pieza G&C existe un proceso
+                de diseño, selección de materiales,
+                fabricación y terminación.
+
+                <br><br>
+
+                Cada detalle importa porque el resultado
+                final forma parte de tu espacio.
+
+            </p>
+
+
+            <div class="craft-list reveal">
+
+                <div class="craft-item">
+
+                    <span>01</span>
+
+                    <span>Diseño</span>
+
+                </div>
+
+                <div class="craft-item">
+
+                    <span>02</span>
+
+                    <span>Selección</span>
+
+                </div>
+
+                <div class="craft-item">
+
+                    <span>03</span>
+
+                    <span>Fabricación</span>
+
+                </div>
+
+                <div class="craft-item">
+
+                    <span>04</span>
+
+                    <span>Terminación</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CUIDADOS
+     ====================================================== -->
+
+<section class="section-dark section-padding">
+
+    <div class="container">
+
+        <div class="section-label reveal">
+            Servicio G&C
+        </div>
+
+        <h2 class="section-title reveal">
+            Tu G&C.<br>
+            Por mucho tiempo.
+        </h2>
+
+        <div class="care-grid" style="margin-top:90px;">
+
+            <div class="care-item reveal">
+
+                <div class="care-number">
+                    01
+                </div>
+
+                <h3>
+                    Cuidados
+                </h3>
+
+                <p>
+                    Recomendaciones para conservar
+                    correctamente los materiales y
+                    tapizados.
+                </p>
+
+            </div>
+
+
+            <div class="care-item reveal">
+
+                <div class="care-number">
+                    02
+                </div>
+
+                <h3>
+                    Garantía
+                </h3>
+
+                <p>
+                    Consultá las condiciones de garantía
+                    asociadas a tu producto.
+                </p>
+
+            </div>
+
+
+            <div class="care-item reveal">
+
+                <div class="care-number">
+                    03
+                </div>
+
+                <h3>
+                    Servicio
+                </h3>
+
+                <p>
+                    Solicitud de reparación,
+                    mantenimiento o retapizado.
+                </p>
+
+            </div>
+
+
+            <div class="care-item reveal">
+
+                <div class="care-number">
+                    04
+                </div>
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    Nuestro equipo está disponible para
+                    ayudarte cuando lo necesites.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FINAL
+     ====================================================== -->
+
+<section id="contacto" class="final">
+
+    <div class="container reveal">
+
+        <div class="final-logo">
+            RESPALDOS G&C
+        </div>
+
+        <h2 class="final-title">
+            Tu espacio.<br>
+            Tu G&C.
+        </h2>
+
+        <p class="final-text">
+
+            Esta experiencia está reservada
+            exclusivamente para clientes G&C.
+
+            <br><br>
+
+            Volvé cuando quieras.
+            Tu acceso siempre estará disponible
+            desde tu producto.
+
+        </p>
+
+        <a
+            href="https://respaldosgc.com.ar/"
+            class="btn"
+        >
+            Visitar Respaldos G&C
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <span>
+        © 2026 RESPALDOS G&C
+    </span>
+
+    <span>
+        G&C PRIVÉ
+    </span>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   G&C PRIVÉ
+   JAVASCRIPT EXPERIENCE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   LOADER
+   --------------------------------------------------------- */
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        document
+            .getElementById("loader")
+            .classList.add("hide");
+
+    }, 900);
+
+});
+
+
+/* ---------------------------------------------------------
+   NAVIGATION
+   --------------------------------------------------------- */
+
+const nav = document.querySelector(".nav");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 80) {
+
+        nav.classList.add("scrolled");
+
+    } else {
+
+        nav.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* ---------------------------------------------------------
+   REVEAL ON SCROLL
+   --------------------------------------------------------- */
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.12
+    }
+
+);
+
+
+document
+    .querySelectorAll(".reveal, .reveal-left")
+    .forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+
+/* ---------------------------------------------------------
+   CUSTOM CURSOR
+   --------------------------------------------------------- */
+
+const cursor = document.querySelector(".cursor");
+const ring = document.querySelector(".cursor-ring");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let ringX = 0;
+let ringY = 0;
+
+
+document.addEventListener("mousemove", event => {
+
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+
+});
+
+
+function animateCursor() {
+
+    cursor.style.left = mouseX + "px";
+    cursor.style.top = mouseY + "px";
+
+    ringX += (mouseX - ringX) * .12;
+    ringY += (mouseY - ringY) * .12;
+
+    ring.style.left = ringX + "px";
+    ring.style.top = ringY + "px";
+
+    requestAnimationFrame(animateCursor);
+
+}
+
+animateCursor();
+
+
+/* ---------------------------------------------------------
+   HOVER EFFECT
+   --------------------------------------------------------- */
+
+document
+    .querySelectorAll("a, .benefit")
+    .forEach(element => {
+
+        element.addEventListener("mouseenter", () => {
+
+            ring.style.width = "60px";
+            ring.style.height = "60px";
+
+        });
+
+        element.addEventListener("mouseleave", () => {
+
+            ring.style.width = "36px";
+            ring.style.height = "36px";
+
+        });
+
+    });
+
+
+/* ---------------------------------------------------------
+   PARALLAX
+   --------------------------------------------------------- */
+
+const heroImage =
+    document.querySelector(".hero-image");
+
+
+window.addEventListener("scroll", () => {
+
+    const scroll =
+        window.scrollY;
+
+    if (scroll < window.innerHeight) {
+
+        heroImage.style.transform =
+            `scale(1) translateY(${scroll * .12}px)`;
+
+    }
+
+});
+
+
+/* ---------------------------------------------------------
+   SMOOTH ANCHOR SCROLL
+   --------------------------------------------------------- */
+
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(anchor => {
+
+        anchor.addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+            const target =
+                document.querySelector(
+                    this.getAttribute("href")
+                );
+
+            if (!target) return;
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+    });
+
+
+/* ---------------------------------------------------------
+   DYNAMIC G&C ID
+   ---------------------------------------------------------
+
+   En producción, este ID puede venir directamente
+   desde la URL del NFC.
+
+   Ejemplo:
+
+   respaldosgc.com.ar/prive/?id=GC000127
+
+   --------------------------------------------------------- */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const gcID =
+    params.get("id");
+
+
+if (gcID) {
+
+    const productID =
+        document.querySelector(".product-id");
+
+    if (productID) {
+
+        productID.textContent =
+            "G&C ID · " + gcID;
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   DYNAMIC CUSTOMER EXPERIENCE
+   ---------------------------------------------------------
+
+   Más adelante podemos conectar esto a una base de datos.
+
+   Por ahora:
+
+   ?id=GC000127
+   ?cliente=Juan
+   ?modelo=Canelon
+
+   --------------------------------------------------------- */
+
+const customer =
+    params.get("cliente");
+
+if (customer) {
+
+    const subtitle =
+        document.querySelector(".hero-subtitle");
+
+    if (subtitle) {
+
+        subtitle.innerHTML =
+            `Hola <strong>${customer}</strong>.<br><br>
+             Tu compra abrió una puerta.
+             Descubrí tu experiencia G&C Privé.`;
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   PREVENT IMAGE DRAG
+   --------------------------------------------------------- */
+
+document
+    .querySelectorAll("img")
+    .forEach(img => {
+
+        img.addEventListener(
+            "dragstart",
+            e => e.preventDefault()
+        );
+
+    });
+
+
+/* ---------------------------------------------------------
+   PAGE VISIBILITY
+   --------------------------------------------------------- */
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        if (document.hidden) {
+
+            document.title =
+                "G&C Privé";
+
+        } else {
+
+            document.title =
+                "G&C Privé | Respaldos G&C";
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
+
