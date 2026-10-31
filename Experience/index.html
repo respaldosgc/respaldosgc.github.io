@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>G&C Experience | Diseñá tu respaldo</title>
+<meta name="description" content="Configurá tu respaldo Respaldos G&C: modelo, medida, tapizado y color. Consultá directamente por WhatsApp desde Don Torcuato.">
+<link rel="icon" href="/logos/logotipo_dorado.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090909;--panel:#121211;--panel2:#191816;--text:#f4f1e9;--muted:#aaa69d;--gold:#c8a96c;--line:rgba(255,255,255,.12);--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope, sans-serif}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(9,9,9,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{max-width:1240px;margin:auto;padding:17px 5vw;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{letter-spacing:.25em;font-size:12px;font-weight:700}.brand span{color:var(--gold)}.nav-note{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero{min-height:410px;display:flex;align-items:end;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.24)),linear-gradient(0deg,#090909 0%,transparent 62%),url('/respaldos-nube/respaldo-con-gajos2.webp') center 42%/cover}
+.hero-inner{width:min(1240px,90%);margin:0 auto;padding:90px 0 58px;position:relative}
+.eyebrow{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin:0 0 17px}
+h1{font-size:clamp(43px,8vw,88px);line-height:.96;letter-spacing:-.065em;font-weight:300;margin:0;max-width:850px}h1 em{font-style:normal;color:var(--gold)}
+.hero p{max-width:500px;color:#d1cec7;line-height:1.8;font-size:14px;margin:22px 0 0}
+.wrap{width:min(1240px,90%);margin:auto}.section-head{padding:65px 0 27px;display:flex;justify-content:space-between;align-items:end;gap:24px}
+.section-head h2{font-size:clamp(30px,4vw,46px);font-weight:300;letter-spacing:-.045em;margin:0}.section-head p{max-width:430px;color:var(--muted);font-size:13px;line-height:1.7;margin:0}
+.builder{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);gap:22px;align-items:start;padding-bottom:76px}
+.visual,.controls,.summary{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.visual{position:sticky;top:88px}.visual-image{height:500px;background:radial-gradient(ellipse at center,#24221e,#111);display:flex;align-items:center;justify-content:center;position:relative}
+.visual-image img{width:100%;height:100%;object-fit:contain;display:block;padding:18px;transition:opacity .2s}
+.visual-tag{position:absolute;left:18px;top:18px;background:rgba(0,0,0,.7);border:1px solid var(--line);padding:9px 12px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);z-index:1}
+.visual-caption{padding:17px 20px;display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px}.visual-caption strong{color:var(--text);font-weight:600}
+.controls{padding:25px}.step{padding:0 0 22px;margin:0 0 22px;border-bottom:1px solid var(--line)}.step:last-child{border:0;margin:0;padding:0}
+.step-title{display:flex;align-items:center;gap:11px;margin-bottom:14px}.num{width:25px;height:25px;border:1px solid rgba(200,169,108,.65);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:10px;flex:none}
+.step-title h3{font-size:13px;font-weight:700;margin:0}.step-title small{margin-left:auto;color:var(--muted);font-size:10px}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.choice{background:#191816;border:1px solid var(--line);color:var(--text);border-radius:11px;padding:12px;text-align:left;cursor:pointer;transition:.18s}
+.choice:hover{border-color:rgba(200,169,108,.65)}.choice.active{border-color:var(--gold);background:rgba(200,169,108,.1);box-shadow:inset 0 0 0 1px rgba(200,169,108,.16)}
+.choice strong{display:block;font-size:12px;font-weight:700}.choice small{display:block;color:var(--muted);font-size:10px;margin-top:5px;line-height:1.4}
+.fabric-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0 0 13px}
+.gallery-card{border:1px solid var(--line);border-radius:12px;background:#171614;overflow:hidden;color:var(--text);text-align:left;padding:0;cursor:pointer}
+.gallery-card img{display:block;width:100%;height:118px;object-fit:cover;object-position:center 45%}
+.gallery-card span{display:block;padding:9px 10px;font-size:10px;color:var(--muted)}
+.gallery-card:hover{border-color:var(--gold)}
+.swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.swatch-option{background:transparent;border:1px solid transparent;border-radius:10px;padding:7px 4px 6px;color:var(--muted);cursor:pointer;text-align:center;min-width:0}
+.swatch-option.active{border-color:var(--gold);background:rgba(200,169,108,.08);color:var(--text)}
+.swatch{display:block;width:37px;height:37px;border-radius:50%;border:2px solid rgba(255,255,255,.3);margin:0 auto 7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.swatch-option span:last-child{display:block;font-size:9px;line-height:1.25}
+.note{font-size:10px;color:var(--muted);line-height:1.6;margin:11px 0 0}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.field{display:none}.field.show{display:block}.field label{display:block;font-size:10px;color:var(--muted);margin:0 0 6px}.field input,.field textarea{width:100%;background:#191816;border:1px solid var(--line);border-radius:9px;color:var(--text);padding:12px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--gold)}
+.full{grid-column:1/-1}.summary{padding:21px;margin-top:13px}.summary-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.summary h3{font-size:16px;font-weight:600;margin:0}.hint{font-size:9px;color:var(--muted);letter-spacing:.1em}
+.summary-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:19px 0}.summary-item span{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:5px}.summary-item strong{font-size:12px;font-weight:600;overflow-wrap:anywhere}
+.cta{width:100%;border:0;border-radius:10px;background:var(--gold);color:#17130c;padding:16px 18px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}.cta:hover{background:#e0c58e;transform:translateY(-1px)}
+.disclaimer{font-size:10px;color:var(--muted);line-height:1.6;margin:11px 0 0}
+.how{padding:25px 0 80px;border-top:1px solid var(--line)}.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.how-card{padding:23px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.how-card b{color:var(--gold);font-size:10px;letter-spacing:.18em}.how-card h3{font-size:16px;font-weight:600;margin:22px 0 8px}.how-card p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
+footer{border-top:1px solid var(--line);padding:24px 5vw;color:var(--muted);font-size:10px;letter-spacing:.1em;display:flex;justify-content:space-between;gap:12px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}.modal.open{display:flex}.modal-box{max-width:700px;width:100%;position:relative}.modal img{width:100%;max-height:82vh;object-fit:contain;border-radius:12px}.modal-close{position:absolute;right:0;top:-42px;background:#24221e;color:white;border:1px solid var(--line);border-radius:50%;width:34px;height:34px;cursor:pointer}
+@media(max-width:850px){.builder{grid-template-columns:1fr}.visual{position:relative;top:auto}.visual-image{height:390px}.section-head{display:block}.section-head>p{margin-top:13px}.how-grid{grid-template-columns:1fr}.hero{min-height:380px}}
+@media(max-width:520px){.nav{padding:15px 5vw}.nav-note{display:none}.controls{padding:18px}.visual-image{height:300px}.hero-inner{padding:78px 0 48px}.summary-list{gap:12px}.swatches{grid-template-columns:repeat(4,minmax(0,1fr))}.gallery-card img{height:90px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><nav class="nav">
+<a class="brand" href="/" aria-label="Respaldos G&C">RESPALDOS <span>G&C</span></a>
+<span class="nav-note">Diseño personalizado · Don Torcuato</span>
+<a class="nav-note" href="https://wa.me/5491130157350" target="_blank" rel="noopener">CONTACTO ↗</a>
+</nav></header>
+<main>
+<section class="hero"><div class="hero-inner">
+<p class="eyebrow">G&C Experience · Estudio de diseño</p>
+<h1>Tu dormitorio.<br><em>Tu diseño.</em></h1>
+<p>Elegí el modelo, las medidas y el tapizado. Armá tu propuesta y envianos tu configuración para recibir una cotización personalizada.</p>
+</div></section>
+<section class="wrap" id="configurador">
+<div class="section-head"><div><p class="eyebrow">01 / Configurador</p><h2>Diseñá tu respaldo</h2></div><p>Explorá los modelos y muestrarios reales de Respaldos G&C para crear tu propuesta.</p></div>
+<div class="builder">
+<div class="visual"><div class="visual-image">
+<span class="visual-tag">Vista de referencia · Modelo</span>
+<img id="productImage" src="/respaldos-nube/respaldo-con-gajos2.webp" alt="Respaldo modelo Nube">
+</div><div class="visual-caption"><strong id="visualName">Modelo Nube</strong><span id="visualFabric">Pana · Beige</span></div></div>
+<div>
+<div class="controls">
+<div class="step"><div class="step-title"><span class="num">01</span><h3>Elegí el modelo</h3><small>Diseño</small></div>
+<div class="choices" id="modelChoices">
+<button class="choice active" data-model="Nube" data-image="/respaldos-nube/respaldo-con-gajos2.webp"><strong>Nube</strong><small>Volúmenes suaves</small></button>
+<button class="choice" data-model="Canelón" data-image="/respaldos-con-gajos/canelon_beige.jpeg"><strong>Canelón</strong><small>Gajos verticales</small></button>
+<button class="choice" data-model="Selección" data-image="/Seleccion/seleccion.webp"><strong>Selección</strong><small>Diseño contemporáneo</small></button>
+<button class="choice" data-model="Clásico" data-image="/clasico/clasico-queen.webp"><strong>Clásico</strong><small>Líneas tradicionales</small></button>
+<button class="choice" data-model="Supraclass" data-image="/supraclass/supraclass-matrimonial-pana-beige.webp"><strong>Supraclass</strong><small>Presencia y volumen</small></button>
+<button class="choice" data-model="Fractura" data-image="/fractura/respaldo-cama-fractura-class.webp"><strong>Fractura</strong><small>Composición modular</small></button>
+</div></div>
+<div class="step"><div class="step-title"><span class="num">02</span><h3>Seleccioná la medida</h3><small>Ancho orientativo</small></div>
+<div class="choices" id="sizeChoices">
+<button class="choice" data-size="100 cm"><strong>100 cm</strong><small>Una plaza</small></button>
+<button class="choice" data-size="140 cm"><strong>140 cm</strong><small>Dos plazas</small></button>
+<button class="choice active" data-size="160 cm"><strong>160 cm</strong><small>Queen</small></button>
+<button class="choice" data-size="180 cm"><strong>180 cm</strong><small>King</small></button>
+<button class="choice" data-size="200 cm"><strong>200 cm</strong><small>King ampliado</small></button>
+<button class="choice" data-size="A medida"><strong>A medida</strong><small>Personalizá ancho y alto</small></button>
+</div>
+<div class="fields" id="customDimensions">
+<div class="field" id="widthField"><label for="customWidth">Ancho en centímetros</label><input id="customWidth" type="number" min="40" max="400" placeholder="Ej. 180"></div>
+<div class="field" id="heightField"><label for="customHeight">Alto en centímetros</label><input id="customHeight" type="number" min="30" max="200" placeholder="Ej. 120"></div>
+</div></div>
+<div class="step"><div class="step-title"><span class="num">03</span><h3>Elegí el tapizado</h3><small>Material</small></div>
+<div class="choices" id="fabricChoices">
+<button class="choice active" data-fabric="Pana"><strong>Pana</strong><small>Textura suave</small></button>
+<button class="choice" data-fabric="Antimanchas"><strong>Antimanchas</strong><small>Muestrario antimanchas</small></button>
+<button class="choice" data-fabric="Lino"><strong>Lino</strong><small>Textura natural</small></button>
+<button class="choice" data-fabric="Tusor"><strong>Tusor</strong><small>Fundas confeccionadas a medida</small></button>
+</div>
+<p class="note" id="fabricNote">Elegí un tono del muestrario. Las fotografías permiten consultar la textura real de cada material.</p>
+</div>
+<div class="step"><div class="step-title"><span class="num">04</span><h3>Elegí el color</h3><small>Muestrario real</small></div>
+<div class="fabric-gallery" id="fabricGallery"></div>
+<div class="swatches" id="colorChoices" aria-label="Colores disponibles"></div>
+<p class="note">Los tonos pueden variar según la iluminación y la pantalla. La disponibilidad final se confirma al cotizar.</p>
+</div>
+<div class="step"><div class="step-title"><span class="num">05</span><h3>Tipo de instalación</h3><small>Montaje</small></div>
+<div class="choices" id="installChoices">
+<button class="choice active" data-install="Colgante / amurado"><strong>Colgante / amurado</strong><small>Fijado a la pared</small></button>
+<button class="choice" data-install="Apoyado"><strong>Apoyado</strong><small>Según características del modelo</small></button>
+</div></div>
+<div class="step"><div class="step-title"><span class="num">06</span><h3>Detalles adicionales</h3><small>Opcional</small></div>
+<div class="field show"><label for="observations">Contanos algún detalle o requerimiento</label><textarea id="observations" rows="3" placeholder="Ej. Tengo una medida especial o quiero consultar por una funda..."></textarea></div>
+</div>
+</div>
+<div class="summary">
+<div class="summary-top"><h3>Tu diseño G&C</h3><span class="hint">RESUMEN DE CONFIGURACIÓN</span></div>
+<div class="summary-list">
+<div class="summary-item"><span>Modelo</span><strong id="sumModel">Nube</strong></div>
+<div class="summary-item"><span>Medida</span><strong id="sumSize">160 cm</strong></div>
+<div class="summary-item"><span>Tapizado</span><strong id="sumFabric">Pana</strong></div>
+<div class="summary-item"><span>Color</span><strong id="sumColor">Beige</strong></div>
+<div class="summary-item"><span>Instalación</span><strong id="sumInstall">Colgante / amurado</strong></div>
+<div class="summary-item"><span>Confección</span><strong id="sumFinish">Tapizado</strong></div>
+</div>
+<button class="cta" id="whatsappBtn" type="button">Enviar mi diseño por WhatsApp ↗</button>
+<p class="disclaimer">Esta herramienta genera una solicitud de cotización, no una compra ni un precio final. La disponibilidad de medidas, telas, colores e instalación se confirma con el equipo de Respaldos G&C.</p>
+</div>
+</div>
+</section>
+<section class="wrap how"><div class="section-head" style="padding-top:0"><div><p class="eyebrow">02 / Próximo paso</p><h2>Del diseño a tu dormitorio</h2></div><p>Una vez que recibamos tu configuración, podemos asesorarte y confirmar las especificaciones de fabricación.</p></div>
+<div class="how-grid">
+<article class="how-card"><b>01 — ELEGÍ</b><h3>Personalizá</h3><p>Seleccioná el modelo, la medida y el tapizado que te gustaría para tu espacio.</p></article>
+<article class="how-card"><b>02 — CONSULTÁ</b><h3>Recibí asesoramiento</h3><p>Enviá tu diseño por WhatsApp para revisar disponibilidad, precio y plazo de fabricación.</p></article>
+<article class="how-card"><b>03 — CONFIRMÁ</b><h3>Hacelo realidad</h3><p>Coordiná los detalles de tu pedido directamente con Respaldos G&C.</p></article>
+</div></section>
+</main>
+<footer><span>© 2026 RESPALDOS G&C</span><span>G&C EXPERIENCE · DON TORCUATO</span></footer>
+<div class="modal" id="sampleModal" role="dialog" aria-modal="true" aria-label="Vista ampliada del muestrario"><div class="modal-box"><button class="modal-close" id="modalClose" aria-label="Cerrar">×</button><img id="modalImage" alt="Muestrario ampliado"></div></div>
+<script>
+(() => {
+"use strict";
+const fabrics = {
+  "Pana": {
+    image:"assets/muestrario-pana.jpg",
+    colors:[
+      ["Rosa claro","#d6c6bd"],["Visón claro","#b6a59b"],["Visón","#89766e"],["Camel","#a77a4d"],
+      ["Mostaza","#e5a51d"],["Ocre","#b96d16"],["Suela","#98664e"],["Chocolate","#4b3b39"],
+      ["Verde oliva","#64723a"],["Bordó","#852e4b"],["Blanco","#e6e3df"],["Gris perla","#c4c5c4"],
+      ["Gris","#888b91"],["Azul","#12438c"]
+    ],
+    note:"Muestrario de pana G&C."
+  },
+  "Antimanchas": {
+    image:"assets/muestrario-antimanchas.jpg",
+    colors:[
+      ["Natural claro","#d5c9b8"],["Arena","#b8aa9b"],["Visón","#9a897a"],["Topo","#877666"],
+      ["Beige","#c6b39a"],["Grafito","#484b4b"],["Celeste","#8eafb0"],["Azul","#354b64"],
+      ["Crudo","#ddd8cc"],["Gris medio","#858584"],["Gris oscuro","#555655"],["Marrón","#62584e"]
+    ],
+    note:"Muestrario identificado como Antimanchas."
+  },
+  "Lino": {
+    image:"assets/muestrario-lino.jpg",
+    colors:[
+      ["Natural claro","#c8c0ae"],["Arena","#b3a997"],["Beige","#a99b87"],["Verde oliva","#8a8a53"],
+      ["Celeste","#718da6"],["Azul","#294d78"],["Terracota","#a94c31"],["Rojo","#9a2d2d"],
+      ["Bordó","#79284a"],["Gris","#77766f"],["Marrón","#6e513b"],["Chocolate","#49352b"],
+      ["Grafito","#393b3a"],["Negro","#171918"]
+    ],
+    note:"Muestrario de lino G&C."
+  },
+  "Tusor": {
+    image:"assets/muestrario-tusor-colores.jpg",
+    colors:[
+      ["Beige","#bda99a"],["Arena","#d0c6a8"],["Crudo","#e0dbce"],["Off White","#eeeae1"]
+    ],
+    note:"Colores identificados en la referencia de Tusor. Fundas confeccionadas a medida."
+  }
+};
+const state={model:"Nube",image:"/respaldos-nube/respaldo-con-gajos2.webp",size:"160 cm",fabric:"Pana",color:"Beige",install:"Colgante / amurado"};
+const $=id=>document.getElementById(id);
+const modelChoices=$("modelChoices"),sizeChoices=$("sizeChoices"),fabricChoices=$("fabricChoices"),installChoices=$("installChoices");
+function setActive(container,button){container.querySelectorAll("button").forEach(b=>b.classList.toggle("active",b===button));}
+function renderFabric(){
+  const data=fabrics[state.fabric];
+  $("fabricNote").textContent=data.note;
+  $("fabricGallery").innerHTML=`<button class="gallery-card" type="button" data-preview="${data.image}"><img src="${data.image}" alt="Muestrario ${state.fabric}" loading="lazy"><span>Ver muestrario completo de ${state.fabric} ↗</span></button>`;
+  $("colorChoices").innerHTML="";
+  data.colors.forEach(([name,color],index)=>{
+    const button=document.createElement("button");
+    button.type="button";button.className="swatch-option"+(index===0?" active":"");
+    button.dataset.color=name;button.innerHTML=`<span class="swatch" style="background:${color}"></span><span>${name}</span>`;
+    button.addEventListener("click",()=>{state.color=name;setActive($("colorChoices"),button);update();});
+    $("colorChoices").appendChild(button);
+  });
+  state.color=data.colors[0][0];
+  update();
+}
+function update(){
+  $("sumModel").textContent=state.model;
+  const width=$("customWidth").value.trim(),height=$("customHeight").value.trim();
+  $("sumSize").textContent=state.size==="A medida"?(width&&height?`${width} × ${height} cm`:"A medida · completar dimensiones"):state.size;
+  $("sumFabric").textContent=state.fabric;
+  $("sumColor").textContent=state.color;
+  $("sumInstall").textContent=state.install;
+  $("sumFinish").textContent=state.fabric==="Tusor"?"Funda a medida":"Tapizado";
+  $("visualName").textContent="Modelo "+state.model;
+  $("visualFabric").textContent=state.fabric+" · "+state.color;
+  $("productImage").alt=`Respaldo de cama modelo ${state.model}`;
+}
+modelChoices.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-model]");if(!b)return;
+  state.model=b.dataset.model;state.image=b.dataset.image;setActive(modelChoices,b);
+  const img=$("productImage");img.style.opacity=".25";
+  img.onload=()=>{img.style.opacity="1";};img.onerror=()=>{img.style.opacity="1";img.alt="Imagen de referencia no disponible. Consultá por este modelo.";img.removeAttribute("src");};
+  img.src=state.image;update();
+});
+sizeChoices.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-size]");if(!b)return;
+  state.size=b.dataset.size;setActive(sizeChoices,b);
+  const custom=state.size==="A medida";
+  $("widthField").classList.toggle("show",custom);$("heightField").classList.toggle("show",custom);
+  update();
+});
+["customWidth","customHeight"].forEach(id=>$(id).addEventListener("input",update));
+fabricChoices.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-fabric]");if(!b)return;
+  state.fabric=b.dataset.fabric;setActive(fabricChoices,b);renderFabric();
+});
+installChoices.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-install]");if(!b)return;
+  state.install=b.dataset.install;setActive(installChoices,b);update();
+});
+$("fabricGallery").addEventListener("click",e=>{
+  const b=e.target.closest("[data-preview]");if(!b)return;
+  $("modalImage").src=b.dataset.preview;$("sampleModal").classList.add("open");
+});
+function closeModal(){$("sampleModal").classList.remove("open");$("modalImage").removeAttribute("src");}
+$("modalClose").addEventListener("click",closeModal);
+$("sampleModal").addEventListener("click",e=>{if(e.target===$("sampleModal"))closeModal();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+$("whatsappBtn").addEventListener("click",()=>{
+  const width=$("customWidth").value.trim(),height=$("customHeight").value.trim();
+  if(state.size==="A medida"&&(!width||!height||Number(width)<=0||Number(height)<=0)){
+    alert("Para cotizar a medida, completá el ancho y el alto en centímetros.");$("customWidth").focus();return;
+  }
+  const size=state.size==="A medida"?`${width} × ${height} cm (ancho × alto)`:state.size;
+  const observations=$("observations").value.trim();
+  const lines=[
+    "Hola, quiero cotizar un respaldo de Respaldos G&C.",
+    "",
+    "MI DISEÑO G&C EXPERIENCE",
+    `Modelo: ${state.model}`,
+    `Medida: ${size}`,
+    `Tapizado: ${state.fabric}`,
+    `Color elegido: ${state.color}`,
+    `Instalación: ${state.install}`,
+    `Confección: ${state.fabric==="Tusor"?"Funda confeccionada a medida":"Tapizado"}`,
+    observations?`Detalles: ${observations}`:"",
+    "",
+    "¿Me pueden informar precio, disponibilidad y plazo de fabricación?"
+  ].filter((line,index)=>line!==""||index===1||index===9).join("\n");
+  const url="https://wa.me/5491130157350?text="+encodeURIComponent(lines);
+  window.open(url,"_blank","noopener,noreferrer");
+});
+renderFabric();
+})();
+</script>
+</body>
+</html>
