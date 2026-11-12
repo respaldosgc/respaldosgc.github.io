@@ -175,74 +175,340 @@ footer{background:#060606;border-top:1px solid var(--line);padding:55px 0 30px}.
 </section>
 
 
-<section class="outlet" aria-labelledby="outlet-title" data-outlet-end="2026-10-31T23:59:59-03:00">
-  <div class="outlet-bar">OFERTA ESPECIAL · OCTUBRE 2026 · STOCK LIMITADO</div>
 
-  <div class="wrap outlet-inner">
-    <div class="outlet-layout">
-      <div>
-        <span class="outlet-label">RESPALDOS G&C / OUTLET</span>
+<section class="noviembre-promo" aria-labelledby="noviembre-title"
+         data-promo-end="2026-11-30T23:59:59-03:00">
 
-        <h2 id="outlet-title">
-          Oportunidades <span>que no se repiten.</span>
+  <div class="noviembre-bar">
+    NOVIEMBRE 2026 · PROMOCIÓN ESPECIAL · 40% OFF
+  </div>
+
+  <div class="wrap noviembre-inner">
+    <div class="noviembre-layout">
+
+      <div class="noviembre-content">
+        <span class="noviembre-label">RESPALDOS G&C® / PROMOCIÓN ESPECIAL</span>
+
+        <h2 id="noviembre-title">
+          Noviembre se disfruta con
+          <span>40% de descuento.</span>
         </h2>
 
         <p>
-          Unidades únicas, modelos discontinuados y piezas seleccionadas
-          disponibles para entrega inmediata. Una selección especial de
-          Respaldos G&C, sujeta a stock.
+          Elegí tu respaldo entre nuestros modelos Clásico y Canelón.
+          Una oportunidad especial para renovar tu dormitorio.
         </p>
 
-        <div class="outlet-details">
-          <span>UNIDADES ÚNICAS</span><i></i>
-          <span>STOCK LIMITADO</span><i></i>
-          <span>ENTREGA INMEDIATA</span>
+        <div class="noviembre-details">
+          <span>MODELO CLÁSICO</span>
+          <i></i>
+          <span>MODELO CANELÓN</span>
+          <i></i>
+          <span>MEDIDA ESPECIAL</span>
         </div>
+
+        <div class="noviembre-price">
+          <span class="noviembre-old-price">$429.000</span>
+          <strong>$257.400</strong>
+          <span class="noviembre-saving">AHORRÁS $171.600</span>
+        </div>
+
+        <p class="noviembre-specs">
+          Promocion Exclusiva en Medidas: 1,40 m × 1,24 m × 5 cm.
+        </p>
       </div>
 
-      <div class="count-box">
-        <div class="count-head">
-          <span>LA CAMPAÑA FINALIZA EN</span>
-          <strong>TIEMPO LIMITADO</strong>
+      <div class="noviembre-count-box">
+        <div class="noviembre-count-head">
+          <span>LA PROMOCIÓN TERMINA EN</span>
+          <strong>HASTA EL 30 DE NOVIEMBRE</strong>
         </div>
 
-        <div class="timer" aria-live="polite"
-             aria-label="Tiempo restante de la campaña Outlet">
-          <div class="unit">
-            <strong id="outlet-days">00</strong>
+        <div class="noviembre-timer" aria-live="polite"
+             aria-label="Tiempo restante de la promoción de noviembre">
+          <div class="noviembre-unit">
+            <strong id="nov-days">00</strong>
             <span>DÍAS</span>
           </div>
-          <div class="divider">:</div>
-
-          <div class="unit">
-            <strong id="outlet-hours">00</strong>
+          <div class="noviembre-divider">:</div>
+          <div class="noviembre-unit">
+            <strong id="nov-hours">00</strong>
             <span>HORAS</span>
           </div>
-          <div class="divider">:</div>
-
-          <div class="unit">
-            <strong id="outlet-minutes">00</strong>
+          <div class="noviembre-divider">:</div>
+          <div class="noviembre-unit">
+            <strong id="nov-minutes">00</strong>
             <span>MIN</span>
           </div>
-          <div class="divider">:</div>
-
-          <div class="unit">
-            <strong id="outlet-seconds">00</strong>
+          <div class="noviembre-divider">:</div>
+          <div class="noviembre-unit">
+            <strong id="nov-seconds">00</strong>
             <span>SEG</span>
           </div>
         </div>
 
-        <a class="outlet-cta" href="/OUTLET/">
-          VER RESPALDOS DISPONIBLES →
+        <a class="noviembre-cta"
+           href="https://wa.me/5491130157350?text=Hola%2C%20quiero%20consultar%20por%20la%20promoci%C3%B3n%20del%2040%25%20OFF%20de%20noviembre.">
+          APROVECHAR PROMOCIÓN →
         </a>
 
-        <span class="outlet-fine">
-          Consultá las unidades disponibles ahora
+        <span class="noviembre-fine">
+          Promoción válida hasta el 30/11/2026.
+          No acumulable con otras promociones.
         </span>
       </div>
+
     </div>
   </div>
 </section>
+
+<style>
+.noviembre-promo {
+  background: #eaf8fc;
+  color: #173b50;
+  overflow: hidden;
+  border-top: 1px solid #c9eaf4;
+  border-bottom: 1px solid #c9eaf4;
+}
+
+.noviembre-bar {
+  background: #42b9d8;
+  color: #fff;
+  text-align: center;
+  padding: 13px 16px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.noviembre-inner {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.noviembre-layout {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.noviembre-label {
+  display: inline-block;
+  color: #269cbd;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.noviembre-content h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.08;
+  margin: 0 0 18px;
+  color: #173b50;
+}
+
+.noviembre-content h2 span {
+  display: block;
+  color: #239fc1;
+}
+
+.noviembre-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 590px;
+}
+
+.noviembre-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 11px;
+  margin: 23px 0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.noviembre-details i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #f2c94c;
+}
+
+.noviembre-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.noviembre-old-price {
+  color: #8398a3;
+  text-decoration: line-through;
+  font-size: 17px;
+}
+
+.noviembre-price strong {
+  color: #168eaf;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 900;
+}
+
+.noviembre-saving {
+  background: #f5d75c;
+  color: #173b50;
+  padding: 7px 10px;
+  font-size: 10px;
+  font-weight: 900;
+  border-radius: 4px;
+}
+
+.noviembre-specs {
+  font-size: 12px !important;
+  font-weight: 700;
+}
+
+.noviembre-count-box {
+  background: #fff;
+  border: 1px solid #d7edf4;
+  border-radius: 12px;
+  padding: 27px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(30, 105, 130, .08);
+}
+
+.noviembre-count-head span,
+.noviembre-count-head strong {
+  display: block;
+}
+
+.noviembre-count-head span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.noviembre-count-head strong {
+  color: #259fbd;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.noviembre-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin: 27px 0;
+}
+
+.noviembre-unit strong {
+  display: block;
+  font-size: clamp(25px, 3vw, 36px);
+  color: #173b50;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+
+.noviembre-unit span {
+  display: block;
+  color: #79909b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.noviembre-divider {
+  color: #42b9d8;
+  font-weight: 900;
+  padding-bottom: 13px;
+}
+
+.noviembre-cta {
+  display: block;
+  background: #239fbd;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 16px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: background .2s ease;
+}
+
+.noviembre-cta:hover {
+  background: #177e9a;
+}
+
+.noviembre-fine {
+  display: block;
+  color: #81939b;
+  font-size: 10px;
+  line-height: 1.5;
+  margin-top: 14px;
+}
+
+@media (max-width: 760px) {
+  .noviembre-inner {
+    padding: 34px 20px;
+  }
+
+  .noviembre-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .noviembre-count-box {
+    padding: 23px 14px;
+  }
+
+  .noviembre-details {
+    gap: 8px;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const section = document.querySelector('.noviembre-promo');
+  if (!section) return;
+
+  const end = new Date(section.dataset.promoEnd).getTime();
+
+  const fields = {
+    days: document.getElementById('nov-days'),
+    hours: document.getElementById('nov-hours'),
+    minutes: document.getElementById('nov-minutes'),
+    seconds: document.getElementById('nov-seconds')
+  };
+
+  function updateNovemberTimer() {
+    let remaining = Math.max(0, end - Date.now());
+
+    const days = Math.floor(remaining / 86400000);
+    const hours = Math.floor((remaining % 86400000) / 3600000);
+    const minutes = Math.floor((remaining % 3600000) / 60000);
+    const seconds = Math.floor((remaining % 60000) / 1000);
+
+    fields.days.textContent = String(days).padStart(2, '0');
+    fields.hours.textContent = String(hours).padStart(2, '0');
+    fields.minutes.textContent = String(minutes).padStart(2, '0');
+    fields.seconds.textContent = String(seconds).padStart(2, '0');
+
+    if (remaining <= 0) {
+      section.querySelector('.noviembre-count-head strong').textContent =
+        'PROMOCIÓN FINALIZADA';
+    }
+  }
+
+  updateNovemberTimer();
+  setInterval(updateNovemberTimer, 1000);
+})();
+</script>
 
 
 <section id="diseños" class="featured reveal">
